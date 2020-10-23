@@ -65,13 +65,11 @@ PostMVP
 | Random Interactions |             When this component is called, a random interaction is chosen from an array and then displayed             |
 
 ## Time
+### Frontend
 
 | Component                                     | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Create React app and files for all components |    H     |       1        |     40min     |    40min    |
-
-### Frontend
-
 | App return routes | 0.5hr | | | |
 | App function routes | 1hr | | | |
 | Room Components | 4hr | | | |
