@@ -69,7 +69,7 @@ PostMVP
 
 | Component                                     | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create React app and files for all components |    H     |       1        |     40min     |    40min    |
+| Create React app and files for all components |    H     |       1        |  |  |
 | App return routes | H | 0.5hr | | |
 | App function routes | H | 1hr | | |
 | Room Components | M | 4hr | | |
