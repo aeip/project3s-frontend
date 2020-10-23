@@ -1,8 +1,8 @@
 import React from 'react';
-import Character from '../Character/Character';
-import Interactions from '../Interactions/Interactions';
-import Inventory from '../Inventory/Inventory';
-import Rooms from '../Rooms/Rooms';
+import {Character} from '../Character/Character';
+import {Interactions} from '../Interactions/Interactions';
+import {Inventory} from '../Inventory/Inventory';
+import {Rooms} from '../Rooms/Rooms';
 
 export const Game = (props) => {
 	return (

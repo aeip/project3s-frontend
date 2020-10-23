@@ -3,9 +3,9 @@ import React, {useState, useEffect} from 'react'
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 //Game Component
-import Game from '../Game/Game'
+import {Game} from '../Game/Game'
 //Result Component
-import Titles from '../Titles/Titles'
+import {Titles} from '../Titles/Titles'
 
 function App() {
   return (
