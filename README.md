@@ -70,18 +70,18 @@ PostMVP
 | Component                                     | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Create React app and files for all components |    H     |       1        |     40min     |    40min    |
-| App return routes | 0.5hr | | | |
-| App function routes | 1hr | | | |
-| Room Components | 4hr | | | |
-| Character Component | 2hr | | | |
-| Inventory Component | 2hr | | | |
-| 3D objects Component | 2hr | | | |
-| Random interactions Component | 2hr | | | |
-| Mobile and Desktop friendly | 3hr | | | |
-| Styling | 3hr | | | |
-| Cors | | 1hr | | |
-| Deploy | 0.5hr | | | |
-| Total | 21hr | | | |
+| App return routes | H | 0.5hr | | |
+| App function routes | H | 1hr | | |
+| Room Components | M | 4hr | | |
+| Character Component | M | 2hr | | |
+| Inventory Component | M | 2hr | | |
+| 3D objects Component | L | 2hr | | |
+| Random interactions Component | L | 2hr | | |
+| Mobile and Desktop friendly | H | 3hr | | |
+| Styling | L | 3hr | | |
+| Cors | | H | 1hr | |
+| Deploy | H | 0.5hr | | |
+| Total |  | 21hr | | |
 
 ## Additional Libraries
 
