@@ -1,7 +1,7 @@
 import React from 'react'
-import Start from './Start'
-import Win from './Win'
-import Death from './Death'
+import {Start} from './Start'
+import {Win} from './Win'
+import {Death} from './Death'
 
 export const Titles = (props) => {
     const start = <Start />;
