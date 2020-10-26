@@ -8,6 +8,17 @@ import {Game} from '../Game/Game'
 import {Titles} from '../Titles/Titles'
 
 function App() {
+	const [title, setTitle] = useState('start');
+
+	const handleStart = () => {
+
+	}
+	const handleWin = () => {
+
+	}
+	const handleDeath = () => {
+		
+	}
   return (
 		<div className='App'>
 			<Switch>
@@ -16,7 +27,7 @@ function App() {
 					path='/'
 					render={(rp) => (
 						<>
-							<Titles {...rp} />
+							<Titles {...rp} title={title} />
 						</>
 					)}
 				/>
