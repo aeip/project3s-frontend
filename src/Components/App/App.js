@@ -1,11 +1,13 @@
 //Import Basics
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 //Game Component
-import {Game} from '../Game/Game'
+import { Game } from '../Game/Game';
 //Result Component
-import {Titles} from '../Titles/Titles'
+import { Titles } from '../Titles/Titles';
+//Scoreboard Component
+import { Scoreboard } from '../Scoreboard/Scoreboard';
 
 function App() {
 	//vars
@@ -15,93 +17,102 @@ function App() {
 	const [items, setItems] = useState([]);
 	const [scoreboards, setScoreboards] = useState([]);
 
-	const emptyChaacter = {
+	//empty chararacter
+	const emptyCharacter = {
 		HP: 100,
 		MadnessLevel: 0,
 		inventory: [],
 		events: [],
 		username: '',
 		currentRoom: '',
-		score: 0
+		score: 0,
 	};
 
 	//get methods
 	const getCharacter = () => {
 		fetch(url + '/character/')
-		.then((response) => response.json())
-		.then((data) => {
-			setCharacters(data);
-		});
+			.then((response) => response.json())
+			.then((data) => {
+				setCharacters(data);
+			});
 	};
 	const getItem = () => {
 		fetch(url + '/item/')
-		.then((response) => response.json())
-		.then((data) => {
-			setItems(data);
-		})
-	}
+			.then((response) => response.json())
+			.then((data) => {
+				setItems(data);
+			});
+	};
 	const getScoreboard = () => {
 		fetch(url + '/score/')
-		.then((response) => response.json())
-		.then((data) => {
-			setScoreboards(data);
-		});
+			.then((response) => response.json())
+			.then((data) => {
+				setScoreboards(data);
+			});
 	};
 
 	//create methods
 	const handleCreateCharacter = (newCharacter) => {
-		fetch(url + '/character', {
+		fetch(url + '/character/', {
 			method: 'post',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(newCharacter)
+			body: JSON.stringify(newCharacter),
 		}).then((response) => getCharacter());
-	}
+	};
 
 	//update methods
 	const handleUpdateCharacter = (character) => {
 		fetch(url + '/character/' + character._id, {
 			method: 'put',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(character)
+			body: JSON.stringify(character),
 		}).then(() => getCharacter());
 	};
-	const handleUpdateItems = () => {
-		
-	}
-	const handleUpdateScoreboard = () => {
-
-	}
+	const handleUpdateCharacterItems = (character, item) => {
+		fetch(url + '/character/' + character._id + '/' + item, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(item),
+		}).then(() => getCharacter());
+	};
+	const handleUpdateScoreboard = (character) => {
+		fetch(url + '/score/' + character._id, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(character),
+		}).then(() => getScoreboard());
+	};
 
 	//delete methods
-	const deleteCharacter = (character) => {
-
-	}
-	const deleteScoreboard = (scoreboard) => {
-
-	}
+	const deleteCharacter = (character) => {};
+	const deleteScoreboard = (scoreboard) => {};
 
 	//useEffect
 	useEffect(() => {
 		getCharacter();
 		getItem();
 		getScoreboard();
-	},[]);
+	}, []);
 
 	//handle methods
 	const handleStart = () => {
 		setTitle('start');
-	}
+	};
 	const handleWin = () => {
 		setTitle('win');
-	}
+	};
 	const handleDeath = () => {
 		setTitle('death');
-	}
-  return (
+	};
+	return (
 		<div className='App'>
 			<Switch>
 				<Route
@@ -131,6 +142,15 @@ function App() {
 								handleWin={handleWin}
 								handleDeath={handleDeath}
 							/>
+						</>
+					)}
+				/>
+				<Route
+					exact
+					path='/score/'
+					render={(rp) => (
+						<>
+							<Scoreboard />
 						</>
 					)}
 				/>
