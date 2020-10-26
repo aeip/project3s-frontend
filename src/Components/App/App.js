@@ -8,8 +8,51 @@ import {Game} from '../Game/Game'
 import {Titles} from '../Titles/Titles'
 
 function App() {
+	//vars
+	const url = 'http://project3s-backend.herokuapp.com/';
 	const [title, setTitle] = useState('start');
+	const [characters, setCharacters] = useState([]);
+	const [items, setItems] = useState([]);
+	const [scoreboards, setScoreboards] = useState([]);
 
+	//get methods
+	const getCharacter = () => {
+
+	}
+	const getItem = () => {
+
+	}
+	const getScoreboard = () => {
+
+	}
+
+	//create methods
+	const handleCreateCharacter = (newCharacter) => {
+
+	}
+
+	//update methods
+	const handleUpdateCharacter = () => {
+
+	}
+	const handleUpdateScoreboard = () => {
+
+	}
+
+	//delete methods
+	const deleteCharacter = (character) => {
+
+	}
+	const deleteScoreboard = (scoreboard) => {
+
+	}
+
+	//useEffect
+	useEffect(() => {
+
+	},[]);
+
+	//handle methods
 	const handleStart = () => {
 
 	}
@@ -17,7 +60,7 @@ function App() {
 
 	}
 	const handleDeath = () => {
-		
+
 	}
   return (
 		<div className='App'>
