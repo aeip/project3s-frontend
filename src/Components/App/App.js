@@ -15,25 +15,62 @@ function App() {
 	const [items, setItems] = useState([]);
 	const [scoreboards, setScoreboards] = useState([]);
 
+	const emptyChaacter = {
+		HP: 100,
+		MadnessLevel: 0,
+		inventory: [],
+		events: [],
+		username: '',
+		currentRoom: '',
+		score: 0
+	};
+
 	//get methods
 	const getCharacter = () => {
-
-	}
+		fetch(url + '/character/')
+		.then((response) => response.json())
+		.then((data) => {
+			setCharacters(data);
+		});
+	};
 	const getItem = () => {
-
+		fetch(url + '/item/')
+		.then((response) => response.json())
+		.then((data) => {
+			setItems(data);
+		})
 	}
 	const getScoreboard = () => {
-
-	}
+		fetch(url + '/score/')
+		.then((response) => response.json())
+		.then((data) => {
+			setScoreboards(data);
+		});
+	};
 
 	//create methods
 	const handleCreateCharacter = (newCharacter) => {
-
+		fetch(url + '/character', {
+			method: 'post',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(newCharacter)
+		}).then((response) => getCharacter());
 	}
 
 	//update methods
-	const handleUpdateCharacter = () => {
-
+	const handleUpdateCharacter = (character) => {
+		fetch(url + '/character/' + character._id, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(character)
+		}).then(() => getCharacter());
+	};
+	const handleUpdateItems = () => {
+		
 	}
 	const handleUpdateScoreboard = () => {
 
@@ -49,18 +86,20 @@ function App() {
 
 	//useEffect
 	useEffect(() => {
-
+		getCharacter();
+		getItem();
+		getScoreboard();
 	},[]);
 
 	//handle methods
 	const handleStart = () => {
-
+		setTitle('start');
 	}
 	const handleWin = () => {
-
+		setTitle('win');
 	}
 	const handleDeath = () => {
-
+		setTitle('death');
 	}
   return (
 		<div className='App'>
@@ -70,7 +109,11 @@ function App() {
 					path='/'
 					render={(rp) => (
 						<>
-							<Titles {...rp} title={title} />
+							<Titles
+								{...rp}
+								title={title}
+								handleCreateCharacter={handleCreateCharacter}
+							/>
 						</>
 					)}
 				/>
@@ -79,7 +122,15 @@ function App() {
 					path='/game/'
 					render={(rp) => (
 						<>
-							<Game {...rp} />
+							<Game
+								{...rp}
+								characters={characters}
+								items={items}
+								scoreboards={scoreboards}
+								handleStart={handleStart}
+								handleWin={handleWin}
+								handleDeath={handleDeath}
+							/>
 						</>
 					)}
 				/>
