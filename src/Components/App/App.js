@@ -19,9 +19,14 @@ function App() {
 
 	//empty character
 	const emptyCharacter = {
+		HP: 100,
+		MadnessLevel: 0,
+		inventory: [],
+		events: [],
 		username: '',
+		currentRoom: '',
+		score: 0,
 	};
-
 	//current character state to bring character data from one component to appjs (here)
 	const [currentCharacter, setCurrentCharacter] = useState(emptyCharacter);
 
@@ -52,13 +57,13 @@ function App() {
 			});
 	};
 
-	const getCharacterByUsername = (character) => {
-		fetch(url + '/character/' + character.username)
-		.then((response) => response.json())
-		.then((data) => {
-			setCurrentCharacter(data)
-		});
-	}
+	// const getCharacterByUsername = (character) => {
+	// 	fetch(url + '/character/' + character.username)
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			setCurrentCharacter(data);
+	// 		});
+	// };
 
 	//create methods
 	const handleCreateCharacter = (newCharacter) => {
@@ -69,7 +74,7 @@ function App() {
 			},
 			body: JSON.stringify(newCharacter),
 		}).then((response) => getCharacter());
-		getCharacterByUsername(newCharacter);
+		setCurrentCharacter(newCharacter);
 	};
 
 	//update methods
@@ -143,7 +148,6 @@ function App() {
 					)}
 				/>
 				<Route
-					
 					path='/game/'
 					render={(rp) => (
 						<>

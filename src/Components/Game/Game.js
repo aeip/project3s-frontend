@@ -9,7 +9,7 @@ export const Game = (props) => {
     <div className='game'>
         <Character />
         <Interactions />
-        <Inventory />
+        <Inventory props={props} />
         <Rooms props={props} />
     </div>
     )
