@@ -61,6 +61,7 @@ function App() {
 			},
 			body: JSON.stringify(newCharacter),
 		}).then((response) => getCharacter());
+		setCurrentCharacter(newCharacter);
 	};
 
 	//update methods

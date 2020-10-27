@@ -7,7 +7,6 @@ import {Win} from '../Titles/Win';
 
 export const Rooms = (prop) => {
 	let props = prop.props;
-	console.log('props: ' + props.currentCharacter.username);
 	const handleRooms = () => {
 
 	};
