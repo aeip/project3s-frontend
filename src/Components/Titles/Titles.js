@@ -4,9 +4,9 @@ import {Win} from './Win'
 import {Death} from './Death'
 
 export const Titles = (props) => {
-    const start = <Start />;
-    const win = <Win />;
-    const death = <Death />;
+    const start = <Start props={props} />;
+    const win = <Win props={props} />;
+    const death = <Death props={props} />;
     const loading = <h1>Loading...</h1>;
     return (props.title === 'start') ? start
             : (props.title === 'win') ? win

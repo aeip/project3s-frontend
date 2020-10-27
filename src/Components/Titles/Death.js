@@ -1,6 +1,7 @@
 import React from 'react';
 
-export const Death = (props) => {
+export const Death = (prop) => {
+    let props = prop.props;
 	return (
         <div className='death'>
             <h1>YOU DIED</h1>

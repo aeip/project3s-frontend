@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
-export const Start = (props) => {
+export const Start = (prop) => {
+    let props = prop.props;
     const [formData, setFormData] = useState(props.character);
     const handleSubmit = (event) => {
         event.preventDefault();
