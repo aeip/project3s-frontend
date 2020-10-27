@@ -9,7 +9,7 @@ export const Inventory = (props) => {
 	return (
 		<div className='inventory'>
 			<DropdownButton id="dropdown-basic-button" title="Inventory">
-				{props.character.inventory !== null ? props.character.inventory.map((item) => {
+				{props.currentCharacter.inventory !== null ? props.currentCharacter.inventory.map((item) => {
 														return(
 															<>
 															<Dropdown.Item >{item}</Dropdown.Item>
