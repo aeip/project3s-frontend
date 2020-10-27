@@ -2,8 +2,8 @@ import React from 'react';
 import {DropdownButton} from 'react-bootstrap'
 import {Dropdown} from 'react-bootstrap'
 
-export const Inventory = (props) => {
-
+export const Inventory = (prop) => {
+	let props = prop.props
 	
 
 	return (

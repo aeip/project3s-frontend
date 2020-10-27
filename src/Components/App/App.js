@@ -52,6 +52,14 @@ function App() {
 			});
 	};
 
+	const getCharacterByUsername = (character) => {
+		fetch(url + '/character/' + character.username)
+		.then((response) => response.json())
+		.then((data) => {
+			setCurrentCharacter(data)
+		});
+	}
+
 	//create methods
 	const handleCreateCharacter = (newCharacter) => {
 		fetch(url + '/character/', {
@@ -61,7 +69,7 @@ function App() {
 			},
 			body: JSON.stringify(newCharacter),
 		}).then((response) => getCharacter());
-		setCurrentCharacter(newCharacter);
+		getCharacterByUsername(newCharacter);
 	};
 
 	//update methods
