@@ -10,7 +10,7 @@ export const Game = (props) => {
         <Character />
         <Interactions />
         <Inventory />
-        <Rooms />
+        <Rooms props={props} />
     </div>
     )
 };

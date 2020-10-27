@@ -135,7 +135,7 @@ function App() {
 					)}
 				/>
 				<Route
-					exact
+					
 					path='/game/'
 					render={(rp) => (
 						<>

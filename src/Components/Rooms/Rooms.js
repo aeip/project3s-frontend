@@ -1,26 +1,38 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import {Foyer} from './Foyer';
 import {Grandhall} from './Grandhall';
 import {Courtyard} from './Courtyard';
 import {Fin} from './Fin';
 
-export const Rooms = (props) => {
+export const Rooms = (prop) => {
+	let props = prop.props;
+	const handleRooms = () => {
+
+	};
 	return (
 		<div className='rooms'>
 			<Switch>
-				<Route exact path='/foyer/' render={(rp) => <Foyer {...rp} />} />
 				<Route
 					exact
-					path='/grandhall/'
-					render={(rp) => <Grandhall {...rp} />}
+					path='/game'
+					render={(rp) => <Foyer {...rp} props={props} />}
 				/>
 				<Route
 					exact
-					path='/courtyard/'
-					render={(rp) => <Courtyard {...rp} />}
+					path='/game/grandhall'
+					render={(rp) => <Grandhall {...rp} props={props} />}
 				/>
-				<Route exact path='/fin/' render={(rp) => <Fin {...rp} />} />
+				<Route
+					exact
+					path='/game/courtyard'
+					render={(rp) => <Courtyard {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/fin'
+					render={(rp) => <Fin {...rp} props={props} />}
+				/>
 			</Switch>
 		</div>
 	);
