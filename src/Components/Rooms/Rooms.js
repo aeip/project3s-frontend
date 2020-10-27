@@ -3,10 +3,11 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import {Foyer} from './Foyer';
 import {Grandhall} from './Grandhall';
 import {Courtyard} from './Courtyard';
-import {Fin} from './Fin';
+import {Win} from '../Titles/Win';
 
 export const Rooms = (prop) => {
 	let props = prop.props;
+	console.log('props: ' + props.currentCharacter.username);
 	const handleRooms = () => {
 
 	};
@@ -31,7 +32,7 @@ export const Rooms = (prop) => {
 				<Route
 					exact
 					path='/game/fin'
-					render={(rp) => <Fin {...rp} props={props} />}
+					render={(rp) => <Win {...rp} props={props} />}
 				/>
 			</Switch>
 		</div>
