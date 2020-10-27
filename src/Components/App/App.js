@@ -13,8 +13,8 @@ function App() {
 	//vars
 	const url = 'http://project3s-backend.herokuapp.com';
 	const [title, setTitle] = useState('start');
-	const [characters, setCharacters] = useState([]);
-	const [items, setItems] = useState([]);
+	// const [characters, setCharacters] = useState([]);
+	// const [items, setItems] = useState([]);
 	const [scoreboards, setScoreboards] = useState([]);
 
 	//empty character
@@ -24,7 +24,7 @@ function App() {
 		inventory: [],
 		events: [],
 		username: '',
-		currentRoom: '',
+		currentRoom: 'Foyer',
 		score: 0,
 	};
 	//current character state to bring character data from one component to appjs (here)
@@ -148,9 +148,7 @@ function App() {
 						<>
 							<Game
 								{...rp}
-								characters={characters}
 								currentCharacter={currentCharacter}
-								items={items}
 								scoreboards={scoreboards}
 								handleStart={handleStart}
 								handleWin={handleWin}
