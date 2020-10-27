@@ -30,25 +30,21 @@ function App() {
 	//current character state to bring character data from one component to appjs (here)
 	const [currentCharacter, setCurrentCharacter] = useState(emptyCharacter);
 
-	const selectCharacter = (character) => {
-		setCurrentCharacter(character);
-	};
-
 	//get methods
-	const getCharacter = () => {
-		fetch(url + '/character/')
-			.then((response) => response.json())
-			.then((data) => {
-				setCharacters(data);
-			});
-	};
-	const getItem = () => {
-		fetch(url + '/item/')
-			.then((response) => response.json())
-			.then((data) => {
-				setItems(data);
-			});
-	};
+	// const getCharacter = () => {
+	// 	fetch(url + '/character/')
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			setCharacters(data);
+	// 		});
+	// };
+	// const getItem = () => {
+	// 	fetch(url + '/item/')
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			setItems(data);
+	// 		});
+	// };
 	const getScoreboard = () => {
 		fetch(url + '/score/')
 			.then((response) => response.json())
@@ -73,8 +69,7 @@ function App() {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(newCharacter),
-		}).then((response) => getCharacter());
-		setCurrentCharacter(newCharacter);
+		}).then((response) => setCurrentCharacter(newCharacter));
 	};
 
 	//update methods
@@ -85,17 +80,17 @@ function App() {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(character),
-		}).then(() => getCharacter());
+		});
 	};
-	const handleUpdateCharacterItems = (character, item) => {
-		fetch(url + '/character/' + character._id + '/' + item, {
-			method: 'put',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(item),
-		}).then(() => getCharacter());
-	};
+	// const handleUpdateCharacterItems = (character, item) => {
+	// 	fetch(url + '/character/' + character._id + '/' + item, {
+	// 		method: 'put',
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 		},
+	// 		body: JSON.stringify(item),
+	// 	}).then(() => getCharacter());
+	// };
 	const handleUpdateScoreboard = (character) => {
 		fetch(url + '/score/' + character._id, {
 			method: 'put',
@@ -115,8 +110,8 @@ function App() {
 
 	//useEffect
 	useEffect(() => {
-		getCharacter();
-		getItem();
+		// getCharacter();
+		// getItem();
 		getScoreboard();
 	}, []);
 
