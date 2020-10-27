@@ -8,6 +8,7 @@ export const Foyer = (prop) => {
 	return (
 		<div className='foyer'>
 			<h1>Foyer</h1>
+    {/* <p>{props.currentCharacter}</p> */}
 			<button onClick={() => nextRoom()}>Next Room</button>
 		</div>
 	);

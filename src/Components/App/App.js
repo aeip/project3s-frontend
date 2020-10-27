@@ -54,7 +54,6 @@ function App() {
 
 	//create methods
 	const handleCreateCharacter = (newCharacter) => {
-		console.log(newCharacter);
 		fetch(url + '/character/', {
 			method: 'post',
 			headers: {
@@ -62,6 +61,7 @@ function App() {
 			},
 			body: JSON.stringify(newCharacter),
 		}).then((response) => getCharacter());
+		setCurrentCharacter(newCharacter);
 	};
 
 	//update methods
@@ -142,6 +142,7 @@ function App() {
 							<Game
 								{...rp}
 								characters={characters}
+								currentCharacter={currentCharacter}
 								items={items}
 								scoreboards={scoreboards}
 								handleStart={handleStart}
