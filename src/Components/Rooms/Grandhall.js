@@ -8,7 +8,6 @@ export const Grandhall = (prop) => {
 	return (
 		<div className='grandhall'>
 			<h1>Grandhall</h1>
-			<p>Hey, {props.currentCharacter.username}</p>
 			<button onClick={() => nextRoom()}>Next Room</button>
 		</div>
 	);

@@ -32,18 +32,18 @@ function App() {
 
 	//get methods
 	// const getCharacter = () => {
-	// 	fetch(url + '/character/')
-	// 		.then((response) => response.json())
-	// 		.then((data) => {
-	// 			setCharacters(data);
-	// 		});
+	//  fetch(url + '/character/')
+	//      .then((response) => response.json())
+	//      .then((data) => {
+	//          setCharacters(data);
+	//      });
 	// };
 	// const getItem = () => {
-	// 	fetch(url + '/item/')
-	// 		.then((response) => response.json())
-	// 		.then((data) => {
-	// 			setItems(data);
-	// 		});
+	//  fetch(url + '/item/')
+	//      .then((response) => response.json())
+	//      .then((data) => {
+	//          setItems(data);
+	//      });
 	// };
 	const getScoreboard = () => {
 		fetch(url + '/score/')
@@ -54,11 +54,11 @@ function App() {
 	};
 
 	// const getCharacterByUsername = (character) => {
-	// 	fetch(url + '/character/' + character.username)
-	// 		.then((response) => response.json())
-	// 		.then((data) => {
-	// 			setCurrentCharacter(data);
-	// 		});
+	//  fetch(url + '/character/' + character.username)
+	//      .then((response) => response.json())
+	//      .then((data) => {
+	//          setCurrentCharacter(data);
+	//      });
 	// };
 
 	//create methods
@@ -74,7 +74,7 @@ function App() {
 
 	//update methods
 	const handleUpdateCharacter = (character) => {
-		fetch(url + '/character/' + character._id, {
+		fetch(url + '/character/' + character.username, {
 			method: 'put',
 			headers: {
 				'Content-Type': 'application/json',
@@ -83,13 +83,13 @@ function App() {
 		});
 	};
 	// const handleUpdateCharacterItems = (character, item) => {
-	// 	fetch(url + '/character/' + character._id + '/' + item, {
-	// 		method: 'put',
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 		},
-	// 		body: JSON.stringify(item),
-	// 	}).then(() => getCharacter());
+	//  fetch(url + '/character/' + character._id + '/' + item, {
+	//      method: 'put',
+	//      headers: {
+	//          'Content-Type': 'application/json',
+	//      },
+	//      body: JSON.stringify(item),
+	//  }).then(() => getCharacter());
 	// };
 	const handleUpdateScoreboard = (character) => {
 		fetch(url + '/score/' + character._id, {
@@ -148,6 +148,7 @@ function App() {
 						<>
 							<Game
 								{...rp}
+								handleUpdateCharacter={handleUpdateCharacter}
 								currentCharacter={currentCharacter}
 								scoreboards={scoreboards}
 								handleStart={handleStart}
