@@ -11,26 +11,23 @@ import { Scoreboard } from '../Scoreboard/Scoreboard';
 
 function App() {
 	//vars
-	const url = 'http://project3s-backend.herokuapp.com/';
+	const url = 'http://project3s-backend.herokuapp.com';
 	const [title, setTitle] = useState('start');
 	const [characters, setCharacters] = useState([]);
 	const [items, setItems] = useState([]);
 	const [scoreboards, setScoreboards] = useState([]);
 
-
 	//empty character
 	const emptyCharacter = {
-		HP: 100,
-		MadnessLevel: 0,
-		inventory: [],
-		events: [],
 		username: '',
-		currentRoom: '',
-		score: 0,
 	};
 
 	//current character state to bring character data from one component to appjs (here)
 	const [currentCharacter, setCurrentCharacter] = useState(emptyCharacter);
+
+	const selectCharacter = (character) => {
+		setCurrentCharacter(character);
+	};
 
 	//get methods
 	const getCharacter = () => {
@@ -57,6 +54,7 @@ function App() {
 
 	//create methods
 	const handleCreateCharacter = (newCharacter) => {
+		console.log(newCharacter);
 		fetch(url + '/character/', {
 			method: 'post',
 			headers: {
@@ -98,7 +96,7 @@ function App() {
 	//delete methods
 	const deleteScoreboard = () => {
 		fetch(url + '/score/', {
-			method: 'delete'
+			method: 'delete',
 		}).then(() => getScoreboard());
 	};
 
