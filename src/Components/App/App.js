@@ -17,7 +17,8 @@ function App() {
 	const [items, setItems] = useState([]);
 	const [scoreboards, setScoreboards] = useState([]);
 
-	//empty chararacter
+
+	//empty character
 	const emptyCharacter = {
 		HP: 100,
 		MadnessLevel: 0,
@@ -27,6 +28,9 @@ function App() {
 		currentRoom: '',
 		score: 0,
 	};
+
+	//current character state to bring character data from one component to appjs (here)
+	const [currentCharacter, setCurrentCharacter] = useState(emptyCharacter);
 
 	//get methods
 	const getCharacter = () => {
@@ -92,8 +96,11 @@ function App() {
 	};
 
 	//delete methods
-	const deleteCharacter = (character) => {};
-	const deleteScoreboard = (scoreboard) => {};
+	const deleteScoreboard = () => {
+		fetch(url + '/score/', {
+			method: 'delete'
+		}).then(() => getScoreboard());
+	};
 
 	//useEffect
 	useEffect(() => {
@@ -123,7 +130,8 @@ function App() {
 							<Titles
 								{...rp}
 								title={title}
-								handleCreateCharacter={handleCreateCharacter}
+								character={currentCharacter}
+								handleSubmit={handleCreateCharacter}
 							/>
 						</>
 					)}
