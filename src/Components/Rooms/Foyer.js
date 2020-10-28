@@ -16,9 +16,6 @@ export const Foyer = (prop) => {
 			props.handleUpdateCharacter(props.currentCharacter);
 			setHasKnife(true);
 		}
-		props.currentCharacter.inventory.push('knife');
-		props.handleUpdateCharacter(props.currentCharacter);
-		setHasKnife(true);
 	};
 	return (
 		<div className='foyer'>
