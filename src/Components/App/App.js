@@ -82,15 +82,30 @@ function App() {
 	// 		body: JSON.stringify(character),
 	// 	});
 	// };
-	const handleUpdateCharacter = (character) => {
-	 fetch(url + '/character/' + character.username, {
+	const handleUpdateCharacter = (character, item) => {
+	 fetch(url + '/character/' + character.username + '/' + item, {
 	     method: 'put',
 	     headers: {
 	         'Content-Type': 'application/json',
 		 },
-		 body: JSON.stringify(character),
 	 });
 	};
+	const handleUpdateCharacterRoom = (character, room) => {
+		fetch(url + '/character/' + character.username + '/room/' + room, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+	}
+	const handleUpdateCharacterScore = (character, score) => {
+		fetch(url + '/character/' + character.username + '/score/' + score, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+	}
 	const handleUpdateScoreboard = (character) => {
 		fetch(url + '/score/' + character._id, {
 			method: 'put',
@@ -149,6 +164,7 @@ function App() {
 							<Game
 								{...rp}
 								handleUpdateCharacter={handleUpdateCharacter}
+								handleUpdateCharacterRoom={handleUpdateCharacterRoom}
 								currentCharacter={currentCharacter}
 								scoreboards={scoreboards}
 								handleStart={handleStart}

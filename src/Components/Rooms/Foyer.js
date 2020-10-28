@@ -3,17 +3,16 @@ import '../Styles/Rooms/Foyer.scss';
 import '../Styles/UserInterface/GameScreen.scss';
 
 export const Foyer = (prop) => {
-	let props = prop.props;
+    let props = prop.props;
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Foyer');
 	const [hasKnife, setHasKnife] = useState(false);
 	const nextRoom = () => {
 		props.history.push('/game/grandhall/');
 	};
-	if (!hasKnife) {
-	}
 	const pickUpKnife = () => {
 		if (!hasKnife) {
 			props.currentCharacter.inventory.push('knife');
-			props.handleUpdateCharacter(props.currentCharacter);
+			props.handleUpdateCharacter(props.currentCharacter, 'knife');
 			setHasKnife(true);
 		}
 	};
