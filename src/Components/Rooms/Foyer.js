@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../Styles/Rooms/Foyer.scss';
 import '../Styles/UserInterface/GameScreen.scss';
+import '../Styles/UserInterface/CharacterPanel.scss'
 
 export const Foyer = (prop) => {
     let props = prop.props;
@@ -26,7 +27,7 @@ export const Foyer = (prop) => {
 						<img src='https://i.imgur.com/pNOztsH.png' />
 					</div>
 				</div>
-				<div className='character-pane'>
+				<div className='character-panel'>
 
 				</div>
 				<div className='text-box'>
