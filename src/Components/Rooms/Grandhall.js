@@ -1,4 +1,7 @@
 import React from 'react';
+import '../Styles/Rooms/GrandHall.scss'
+import '../Styles/UserInterface/GameScreen.scss';
+import '../Styles/UserInterface/CharacterPanel.scss'
 
 export const Grandhall = (prop) => {
     let props = prop.props;
@@ -7,7 +10,7 @@ export const Grandhall = (prop) => {
 		props.history.push('/game/courtyard/');
 	};
 	return (
-		<div className='grandhall'>
+		<div className='grandhall room'>
 			<h1>Grandhall</h1>
 			<div className='game-screen'>
 				<div className='background'>
@@ -15,11 +18,15 @@ export const Grandhall = (prop) => {
 						<img src='https://i.imgur.com/pNOztsH.png' />
 					</div>
 				</div>
-				<div className='character-pane'>
-
+				<div className='character-panel'>
+					<div className='character'></div>
+					<div className='health'>
+						<div className='health-icon'></div>
+						<div className='health-number'></div>
+					</div>
 				</div>
 				<div className='text-box'>
-					<p>You enter the foyer of the grand estate. A lone beam of moonlight shines down to the center of the room.</p> <p>Within it's pale glow is the flash of metal from a steel knife. Looks like someone dropped this in a hurry.</p>
+					
 					<button onClick={() => nextRoom()}>Next Room</button>
 				</div>
 			</div>

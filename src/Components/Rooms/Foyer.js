@@ -18,7 +18,7 @@ export const Foyer = (prop) => {
 		}
 	};
 	return (
-		<div className='foyer'>
+		<div className='foyer room'>
 			<h1>Foyer</h1>
 
 			<div className='game-screen'>
@@ -28,7 +28,11 @@ export const Foyer = (prop) => {
 					</div>
 				</div>
 				<div className='character-panel'>
-
+					<div className='character'></div>
+					<div className='health'>
+						<div className='health-icon'></div>
+						<div className='health-number'></div>
+					</div>
 				</div>
 				<div className='text-box'>
 					<p>You enter the foyer of the grand estate. A lone beam of moonlight shines down to the center of the room.</p> <p>Within it's pale glow is the flash of metal from a steel knife. Looks like someone dropped this in a hurry.</p>
