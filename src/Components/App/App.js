@@ -37,6 +37,14 @@ function App() {
 			});
 	};
 
+	const handleSignIn = (character) => {
+		fetch(url + '/character/' + character.username)
+		.then((response) => response.json())
+		.then((data) => {
+			setCurrentCharacter(data)
+		})
+	}
+
 	//create methods
 	const handleCreateCharacter = (newCharacter) => {
 		fetch(url + '/character/', {
@@ -101,7 +109,8 @@ function App() {
 								{...rp}
 								title={title}
 								character={currentCharacter}
-								handleSubmit={handleCreateCharacter}
+								handleSignIn={handleSignIn}
+								handleSubmitCreate={handleCreateCharacter}
 							/>
 						</>
 					)}

@@ -12,11 +12,27 @@ export const Start = (prop) => {
 				.then((response) => response.json())
 				.then((data) => {
 					if (!data) {
-						props.handleSubmit(formData);
+                        console.log('creating new');
+						props.handleSubmitCreate(formData);
 						props.history.push('/game/');
 					} else {
-                        setCheckUser(true);
-                    }
+                        console.log('searching for found user');
+						fetch(
+							url + '/character/' + formData.username + '/' + formData.password
+						)
+							.then((response) => response.json())
+							.then((data) => {
+								if (!data) {
+                                    console.log('wrong password')
+									setCheckUser(true);
+								} else {
+                                    console.log('you was right')
+									props.handleSignIn(formData);
+									props.history.push('/game/');
+									
+								}
+							});
+					}
 				});
 		};
 		checkUsername();
@@ -27,7 +43,10 @@ export const Start = (prop) => {
 	return (
 		<div className='start'>
 			<h1>Dunwich Manor</h1>
-            {checkUser ? <p>Please enter a unique username</p> : null}
+			<p>Create an account or Sign In</p>
+			{checkUser ? (
+				<p>Your username exists but that is the wrong password.</p>
+			) : null}
 			<form onSubmit={handleSubmit}>
 				<input
 					type='text'
@@ -35,6 +54,13 @@ export const Start = (prop) => {
 					value={FormData.username}
 					onChange={handleChange}
 					placeholder='Enter username'
+				/>
+				<input
+					type='text'
+					name='password'
+					value={FormData.password}
+					onChange={handleChange}
+					placeholder='Enter password'
 				/>
 				<br />
 				<input type='submit' value='Start' />
