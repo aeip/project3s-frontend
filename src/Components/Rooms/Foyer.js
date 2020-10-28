@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../Styles/Rooms/Foyer.scss'
-import '../Styles/UserInterface/GameScreen.scss'
+import '../Styles/Rooms/Foyer.scss';
+import '../Styles/UserInterface/GameScreen.scss';
 
 export const Foyer = (prop) => {
 	let props = prop.props;
@@ -8,20 +8,23 @@ export const Foyer = (prop) => {
 	const nextRoom = () => {
 		props.history.push('/game/grandhall/');
 	};
+	if (!hasKnife) {
+	}
 	const pickUpKnife = () => {
-        props.currentCharacter.inventory.push('knife');
-        props.handleUpdateCharacter(props.currentCharacter);
-		setHasKnife(true);
+		if (!hasKnife) {
+			props.currentCharacter.inventory.push('knife');
+			props.handleUpdateCharacter(props.currentCharacter);
+			setHasKnife(true);
+		}
 	};
 	return (
 		<div className='foyer'>
 			<h1>Foyer</h1>
-			
-			<div className='game-screen'>
 
+			<div className='game-screen'>
 				<div className='background'>
 					<div className='graphic'>
-						<img src='https://i.imgur.com/pNOztsH.png'/>
+						<img src='https://i.imgur.com/pNOztsH.png' />
 					</div>
 				</div>
 				<div className='character-pane'>
