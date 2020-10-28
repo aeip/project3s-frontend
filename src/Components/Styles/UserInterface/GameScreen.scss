@@ -1,0 +1,53 @@
+.game-screen {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+
+    .background {
+        // border-style: solid;
+        background-image: url('https://i.imgur.com/HC0jzKZ.jpg');
+        max-height: 600px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .graphic {
+            display: flex;
+            margin: auto;
+            color: green;
+            height: 300px;
+            width: 100%;
+            img {
+                margin: auto;
+                width: 50%;
+            }  
+        }
+    }
+    .text-box {
+        border-style: solid;
+        border-width: 2px;
+        border-color: green;
+        margin: auto;
+        padding: 5px;
+        // display: block;
+        // width: 100%;
+        p {
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (min-width: 426px) {
+    .game-screen{
+        .background {
+            .graphic {
+                height: 500px;
+            }
+        }
+        .text-box{
+            padding: 10px;
+        }
+    }
+}

@@ -73,24 +73,24 @@ function App() {
 	};
 
 	//update methods
-	const handleUpdateCharacter = (character) => {
-		fetch(url + '/character/' + character.username, {
-			method: 'put',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(character),
-		});
-	};
-	// const handleUpdateCharacterItems = (character, item) => {
-	//  fetch(url + '/character/' + character._id + '/' + item, {
-	//      method: 'put',
-	//      headers: {
-	//          'Content-Type': 'application/json',
-	//      },
-	//      body: JSON.stringify(item),
-	//  }).then(() => getCharacter());
+	// const handleUpdateCharacter = (character) => {
+	// 	fetch(url + '/character/' + character.username, {
+	// 		method: 'put',
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 		},
+	// 		body: JSON.stringify(character),
+	// 	});
 	// };
+	const handleUpdateCharacter = (character) => {
+	 fetch(url + '/character/' + character.username, {
+	     method: 'put',
+	     headers: {
+	         'Content-Type': 'application/json',
+		 },
+		 body: JSON.stringify(character),
+	 });
+	};
 	const handleUpdateScoreboard = (character) => {
 		fetch(url + '/score/' + character._id, {
 			method: 'put',
