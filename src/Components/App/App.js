@@ -82,12 +82,13 @@ function App() {
 	// 		body: JSON.stringify(character),
 	// 	});
 	// };
-	const handleUpdateCharacter = (character, item) => {
-	 fetch(url + '/character/' + character.username + '/' + item, {
+	const handleUpdateCharacter = (character) => {
+	 fetch(url + '/character/' + character.username {
 	     method: 'put',
 	     headers: {
 	         'Content-Type': 'application/json',
-	     }
+		 },
+		 body: JSON.stringify(character)
 	 });
 	};
 	const handleUpdateScoreboard = (character) => {
