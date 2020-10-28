@@ -18,7 +18,7 @@
             display: flex;
             margin: auto;
             color: green;
-            height: 350px;
+            height: 300px;
             width: 100%;
             img {
                 margin: auto;
@@ -31,16 +31,23 @@
         border-width: 2px;
         border-color: green;
         margin: auto;
+        padding: 5px;
         // display: block;
         // width: 100%;
+        p {
+            font-size: 14px;
+        }
     }
 }
 @media screen and (min-width: 426px) {
     .game-screen{
         .background {
             .graphic {
-                height: 600px;
+                height: 500px;
             }
+        }
+        .text-box{
+            padding: 10px;
         }
     }
 }

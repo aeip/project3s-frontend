@@ -16,9 +16,6 @@ export const Inventory = (prop) => {
 															</>
 														)
 				}) : ''}
-  				<Dropdown.Item >Action</Dropdown.Item>
-  				<Dropdown.Item >Another action</Dropdown.Item>
-  				<Dropdown.Item >Something else</Dropdown.Item>
 			</DropdownButton>
 		</div>
 	);
