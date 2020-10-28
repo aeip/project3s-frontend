@@ -8,7 +8,6 @@
 
     .background {
         // border-style: solid;
-        background-image: url('https://i.imgur.com/HC0jzKZ.jpg');
         max-height: 600px;
         background-size: cover;
         background-position: center;
@@ -25,6 +24,9 @@
                 width: 50%;
             }  
         }
+    }
+    .character-pane {
+        height: 100px;
     }
     .text-box {
         border-style: solid;
