@@ -13,8 +13,6 @@ function App() {
 	//vars
 	const url = 'http://project3s-backend.herokuapp.com';
 	const [title, setTitle] = useState('start');
-	// const [characters, setCharacters] = useState([]);
-	// const [items, setItems] = useState([]);
 	const [scoreboards, setScoreboards] = useState([]);
 
 	//empty character
@@ -31,20 +29,6 @@ function App() {
 	const [currentCharacter, setCurrentCharacter] = useState(emptyCharacter);
 
 	//get methods
-	// const getCharacter = () => {
-	//  fetch(url + '/character/')
-	//      .then((response) => response.json())
-	//      .then((data) => {
-	//          setCharacters(data);
-	//      });
-	// };
-	// const getItem = () => {
-	//  fetch(url + '/item/')
-	//      .then((response) => response.json())
-	//      .then((data) => {
-	//          setItems(data);
-	//      });
-	// };
 	const getScoreboard = () => {
 		fetch(url + '/score/')
 			.then((response) => response.json())
@@ -52,14 +36,6 @@ function App() {
 				setScoreboards(data);
 			});
 	};
-
-	// const getCharacterByUsername = (character) => {
-	//  fetch(url + '/character/' + character.username)
-	//      .then((response) => response.json())
-	//      .then((data) => {
-	//          setCurrentCharacter(data);
-	//      });
-	// };
 
 	//create methods
 	const handleCreateCharacter = (newCharacter) => {
@@ -73,45 +49,33 @@ function App() {
 	};
 
 	//update methods
-	// const handleUpdateCharacter = (character) => {
-	// 	fetch(url + '/character/' + character.username, {
-	// 		method: 'put',
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 		},
-	// 		body: JSON.stringify(character),
-	// 	});
-	// };
-	const handleUpdateCharacter = (character) => {
-	 fetch(url + '/character/' + character.username, {
+	const handleUpdateCharacter = (character, item) => {
+	 fetch(url + '/character/' + character.username + '/' + item, {
 	     method: 'put',
 	     headers: {
 	         'Content-Type': 'application/json',
 		 },
-		 body: JSON.stringify(character),
 	 });
 	};
-	const handleUpdateScoreboard = (character) => {
-		fetch(url + '/score/' + character._id, {
+	const handleUpdateCharacterRoom = (character, room) => {
+		fetch(url + '/character/' + character.username + '/room/' + room, {
 			method: 'put',
 			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(character),
-		}).then(() => getScoreboard());
-	};
-
-	//delete methods
-	const deleteScoreboard = () => {
-		fetch(url + '/score/', {
-			method: 'delete',
-		}).then(() => getScoreboard());
-	};
+				'Content-Type': 'application/json'
+			}
+		})
+	}
+	const handleUpdateCharacterScore = (character, score) => {
+		fetch(url + '/character/' + character.username + '/score/' + score, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+	}
 
 	//useEffect
 	useEffect(() => {
-		// getCharacter();
-		// getItem();
 		getScoreboard();
 	}, []);
 
@@ -149,6 +113,7 @@ function App() {
 							<Game
 								{...rp}
 								handleUpdateCharacter={handleUpdateCharacter}
+								handleUpdateCharacterRoom={handleUpdateCharacterRoom}
 								currentCharacter={currentCharacter}
 								scoreboards={scoreboards}
 								handleStart={handleStart}
