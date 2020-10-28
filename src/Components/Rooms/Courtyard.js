@@ -9,7 +9,7 @@ export const Courtyard = (prop) => {
     return (
 			<div className='courtyard'>
 				<h1>Foyer</h1>
-				<button onClick={nextRoom()}>Next Room</button>
+				<button onClick={() => nextRoom()}>Next Room</button>
 			</div>
 		);
 }
