@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../Styles/Rooms/Foyer.scss'
+import '../Styles/UserInterface/GameScreen.scss'
 
 export const Foyer = (prop) => {
 	let props = prop.props;
@@ -14,13 +16,24 @@ export const Foyer = (prop) => {
 	return (
 		<div className='foyer'>
 			<h1>Foyer</h1>
-			{hasKnife ? (
-				<p>You picked up a knife</p>
-			) : (
-				<p>Would you like to pick up a knife?</p>
-			)}
-			<button onClick={() => pickUpKnife()}>Pick up knife</button>
-			<button onClick={() => nextRoom()}>Next Room</button>
+			
+			<div className='game-screen'>
+
+				<div className='background'>
+					<div className='graphic'>
+						<img src='https://i.imgur.com/pNOztsH.png'/>
+					</div>
+				</div>
+				<div className='text-box'>
+							{hasKnife ? (
+								<p>You picked up a knife</p>
+							) : (
+								<p>Would you like to pick up a knife?</p>
+							)}
+					<button onClick={() => pickUpKnife()}>Pick up knife</button>
+					<button onClick={() => nextRoom()}>Next Room</button>
+				</div>
+			</div>
 		</div>
 	);
 };
