@@ -43,6 +43,7 @@ function App() {
 		.then((response) => response.json())
 		.then((data) => {
 			setCurrentCharacter(data)
+			console.log('data', data)
 		})
 	}
 
@@ -64,7 +65,8 @@ function App() {
 	     headers: {
 	         'Content-Type': 'application/json',
 		 },
-	 });
+	 })
+	 .then((response) => handleSignIn(character))
 	};
 	const handleUpdateCharacterRoom = (character, room) => {
 		fetch(url + '/character/' + character.username + '/room/' + room, {

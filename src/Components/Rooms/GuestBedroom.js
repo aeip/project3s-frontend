@@ -7,6 +7,10 @@ export const GuestBedroom = (prop) => {
 
 	let props = prop.props;
 	props.handleUpdateCharacterRoom(props.currentCharacter, 'Guest Bedroom');
+
+	const nextGrandhall = () => {
+        props.history.push('/game/grandhall/')
+    }
 	
     return(
         <div className='greenhouse room'>
@@ -39,6 +43,7 @@ export const GuestBedroom = (prop) => {
 				<div className='text-box'>
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+					<button onClick={() => nextGrandhall()}>Back to Grandhall</button>
 				</div>
 			</div>
 		</div>
