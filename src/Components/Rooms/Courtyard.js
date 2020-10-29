@@ -19,7 +19,7 @@ export const Courtyard = (prop) => {
 		} else if(props.currentCharacter.inventory.includes('Mysterious Key')){
 			setisDead(true)
 			props.deathReason(3)
-			setTimeout(dead, 3000)
+			setTimeout(dead, 2000)
 		}else{
 			alert("The door is locked")
 		}
