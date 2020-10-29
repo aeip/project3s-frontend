@@ -78,16 +78,7 @@ export const Rooms = (prop) => {
 					path='/game/ballroom'
 					render={(rp) => <BallRoom {...rp} props={props} />}
 				/>
-				<Route
-					exact
-					path='/game/win'
-					render={(rp) => <Win {...rp} props={props} />}
-				/>
-				<Route
-					exact
-					path='/game/lose'
-					render={(rp) => <Death {...rp} props={props} />}
-				/>
+				
 			</Switch>
 		</div>
 	);

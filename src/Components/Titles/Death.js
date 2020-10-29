@@ -1,7 +1,8 @@
 import React from 'react';
 
-export const Death = (prop) => {
-    let props = prop.props;
+export const Death = (props) => {
+    
+    console.log('Death props',props)
 	return (
         <div className='death'>
             <h1>YOU DIED</h1>

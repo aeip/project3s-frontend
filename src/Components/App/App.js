@@ -8,13 +8,27 @@ import { Game } from '../Game/Game';
 import { Titles } from '../Titles/Titles';
 //Scoreboard Component
 import { Scoreboard } from '../Scoreboard/Scoreboard';
+import {Win} from '../Titles/Win'
+import {Death} from '../Titles/Death'
 
 function App() {
 	//vars
 	const url = 'http://project3s-backend.herokuapp.com';
 	const [title, setTitle] = useState('start');
 	const [scoreboards, setScoreboards] = useState([]);
+	const [death, setDeath] = useState('')
 	
+	//handle death reason
+	const deathReason = (number) => {
+		
+		if(number = 1){ //health hit 0
+			setDeath('You ran out of life...')
+		}else if (number = 2){ //madness over 15
+			setDeath('The mansion drove you insane...')
+		} else if (number = 3){ //bad ending
+			setDeath("Something did not want you there")
+		}
+	}
 
 	//empty character
 	const emptyCharacter = {
@@ -162,6 +176,16 @@ function App() {
 							<Scoreboard />
 						</>
 					)}
+				/>
+				<Route
+					exact
+					path='/win'
+					render={(rp) => <Win {...rp}  />}
+				/>
+				<Route
+					exact
+					path='/lose'
+					render={(rp) => <Death {...rp}  />}
 				/>
 			</Switch>
 		</div>

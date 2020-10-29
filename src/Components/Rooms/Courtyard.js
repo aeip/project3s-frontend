@@ -12,9 +12,9 @@ export const Courtyard = (prop) => {
     }
     const nextRoom = () => {
 		if(props.currentCharacter.inventory.includes('Mysterious Key') && props.currentCharacter.inventory.includes('Knife')){
-			props.history.push('/game/win/');
+			props.history.push('/win/');
 		} else if(props.currentCharacter.inventory.includes('Mysterious Key')){
-			props.history.push('/game/lose/')
+			props.history.push('/lose/')
 		}else{
 			alert("The door is locked")
 		}
