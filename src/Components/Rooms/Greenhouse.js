@@ -3,7 +3,14 @@ import '../Styles/Rooms/Greenhouse.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-export const Greenhouse = () => {
+export const Greenhouse = (prop) => {
+    let props = prop.props;
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Greenhouse');
+
+    const nextBallroom = () => {
+        props.history.push('/game/ballroom')
+    }
+
     return(
         <div className='greenhouse room'>
 			<h1>Greenhouse</h1>
@@ -21,12 +28,12 @@ export const Greenhouse = () => {
 					<div className='health'>
 						<div className='health-icon'>
 							{/* This is where we insert the code that calls the current number for health */}
-							<div className='health-number'>100</div>
+							<div className='health-number'>{props.currentCharacter.HP}</div>
 						</div>
 						
 						<div className='madness-icon'>
 							{/* This is where we put the code to output the current madness number */}
-							<div className='madness-number'>5</div>
+							<div className='madness-number'>{props.currentCharacter.MadnessLevel}</div>
 						</div>
 						
 					</div>
@@ -35,6 +42,7 @@ export const Greenhouse = () => {
 				<div className='text-box'>
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+                    <button onClick={() => nextBallroom()}>Back to Ballroom</button>
 				</div>
 			</div>
 		</div>

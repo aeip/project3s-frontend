@@ -8,8 +8,11 @@ import DiningHall from './DiningHall'
 import {BallRoom} from './BallRoom'
 import {RecRoom} from './RecRoom'
 import {Study} from './Study'
+import {Greenhouse} from './Greenhouse'
 import {Win} from '../Titles/Win'; 
 import { MasterBedroom } from './MasterBedroom';
+import {Kitchen} from './Kitchen'
+
 
 export const Rooms = (prop) => {
 	let props = prop.props;
@@ -23,6 +26,21 @@ export const Rooms = (prop) => {
 					exact
 					path='/game'
 					render={(rp) => <Foyer {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/study'
+					render={(rp) => <Study {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/kitchen'
+					render={(rp) => <Kitchen {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/greenhouse'
+					render={(rp) => <Greenhouse {...rp} props={props} />}
 				/>
 				<Route
 					exact

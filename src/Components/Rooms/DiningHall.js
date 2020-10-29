@@ -3,7 +3,18 @@ import '../Styles/Rooms/DiningHall.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-const DiningHall = () => {
+const DiningHall = (prop) => {
+
+    let props = prop.props;
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
+
+    const nextGrandhall = () => {
+        props.history.push('/game/grandhall/')
+    }
+    const nextKitchen = () => {
+        props.history.push('/game/kitchen/')
+    }
+
     return(
         <div className='dininghall room'>
 			<h1>Dining Hall</h1>
@@ -35,6 +46,8 @@ const DiningHall = () => {
 				<div className='text-box'>
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+                    <button onClick={() => nextGrandhall()}>Grandhall</button>
+                    <button onClick={() => nextKitchen()}>Kitchen</button>
 				</div>
 			</div>
 		</div>
