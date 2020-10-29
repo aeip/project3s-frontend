@@ -60,15 +60,19 @@ export const Grandhall = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-				<DropdownButton id="dropdown-basic-button" title="Where to?">
-					<Dropdown.Item ><button onClick={() => nextCourtyard()}>Courtyard</button></Dropdown.Item>
-					<Dropdown.Item ><button onClick={() => nextGuestBedroom()}>Guest Bedroom</button></Dropdown.Item>
-					<Dropdown.Item ><button onClick={() => nextMasterBedroom()}>Master Bedroom</button></Dropdown.Item>
-					<Dropdown.Item ><button onClick={() => nextBallroom()}>Ballroom</button></Dropdown.Item>
-					<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
-					<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
-				</DropdownButton>
-				<button onClick={() => nextFoyer()}>Back to Foyer</button>
+				<p>You are in a lar</p>
+
+				<div className='nav-buttons'>
+					<DropdownButton id="dropdown-basic-button" title="Where to?">
+						<Dropdown.Item ><button onClick={() => nextCourtyard()}>Courtyard</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextGuestBedroom()}>Guest Bedroom</button></Dropdown.Item> 
+						<Dropdown.Item ><button onClick={() => nextMasterBedroom()}>Master Bedroom</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextBallroom()}>Ballroom</button></Dropdown.Item> 
+						<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
+					</DropdownButton>
+					<button onClick={() => nextFoyer()}>Back to Foyer</button>
+					</div>
 				</div>
 			</div>
 		</div>

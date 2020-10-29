@@ -3,15 +3,15 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import {Foyer} from './Foyer';
 import {Grandhall} from './Grandhall';
 import {Courtyard} from './Courtyard';
-import {GuestBedroom} from './GuestBedroom'
-import DiningHall from './DiningHall'
-import {BallRoom} from './BallRoom'
-import {RecRoom} from './RecRoom'
-import {Study} from './Study'
-import {Greenhouse} from './Greenhouse'
+import {GuestBedroom} from './GuestBedroom';
+import DiningHall from './DiningHall';
+import {BallRoom} from './BallRoom';
+import {RecRoom} from './RecRoom';
+import {Study} from './Study';
+import {Greenhouse} from './Greenhouse';
 import {Win} from '../Titles/Win'; 
 import { MasterBedroom } from './MasterBedroom';
-import {Kitchen} from './Kitchen'
+import {Kitchen} from './Kitchen';
 
 
 export const Rooms = (prop) => {
