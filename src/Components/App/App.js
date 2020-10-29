@@ -14,6 +14,7 @@ function App() {
 	const url = 'http://project3s-backend.herokuapp.com';
 	const [title, setTitle] = useState('start');
 	const [scoreboards, setScoreboards] = useState([]);
+	
 
 	//empty character
 	const emptyCharacter = {
@@ -73,6 +74,23 @@ function App() {
 			}
 		})
 	}
+	const handleUpdateHP = (character, HP) => {
+		fetch(url + '/character/' + character.username + '/HP/' + HP, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+	}
+	const handleUpdateMadness = (character, madness) => {
+		fetch(url + '/character/' + character.username + '/madness/' + madness, {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+	}
+	
 	const handleUpdateCharacterScore = (character, score) => {
 		fetch(url + '/character/' + character.username + '/score/' + score, {
 			method: 'put',
@@ -121,6 +139,8 @@ function App() {
 						<>
 							<Game
 								{...rp}
+								handleUpdateHP={handleUpdateHP}
+								handleUpdateMadness={handleUpdateMadness}
 								handleUpdateCharacter={handleUpdateCharacter}
 								handleUpdateCharacterRoom={handleUpdateCharacterRoom}
 								currentCharacter={currentCharacter}
