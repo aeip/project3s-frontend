@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import {DropdownButton} from 'react-bootstrap'
 import {Dropdown} from 'react-bootstrap'
+import '../Styles/UserInterface/Inventory.scss'
 
 
 export const Inventory = (prop) => {
