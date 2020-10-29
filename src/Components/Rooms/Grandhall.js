@@ -16,19 +16,32 @@ export const Grandhall = (prop) => {
 		props.history.push('/game/');
 	};
 	const nextDiningHall = () => {
-		props.history.push('/game/dininghall/');
+		if(props.currentCharacter.inventory.includes('Dining Hall Key')){
+			props.history.push('/game/dininghall/');
+		} else {
+			alert("The door is locked")
+		}
 	};
 	const nextBallroom = () => {
 		props.history.push('/game/ballroom/');
 	};
 	const nextRecRoom = () => {
-		props.history.push('/game/recroom/');
+		if(props.currentCharacter.inventory.includes('Rec Room Key')){
+			props.history.push('/game/recroom/');
+		} else {
+			alert("The door is locked")
+		}
 	};
 	const nextMasterBedroom = () => {
 		props.history.push('/game/masterbedroom/');
 	};
 	const nextGuestBedroom = () => {
-		props.history.push('/game/guestbedroom/');
+		if(props.currentCharacter.inventory.includes('Guest Bedroom Key')){
+			props.history.push('/game/guestbedroom/');
+		} else {
+			alert("The door is locked")
+		}
+		
 	};
 
 	return (
