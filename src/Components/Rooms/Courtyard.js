@@ -38,8 +38,9 @@ export const Courtyard = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
-					<button onClick={() => nextRoom()}>Next Room</button>
+					<div className='nav-buttons'>
+                        <button onClick={() => nextRoom()}>Next Room</button>
+                    </div>
 				</div>
 			</div>
 		</div>

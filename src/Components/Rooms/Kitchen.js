@@ -52,9 +52,12 @@ export const Kitchen = (prop) => {
 							) : (
 								<p>Would you like to pick up a knife?</p>
 							)}
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-                    <button onClick={() => nextDiningHall()}>Dining Hall</button>
                     <button onClick={() => pickUpKnife()}>Pick up knife</button>
+
+					<div className='nav-buttons'>
+					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
+                        <button onClick={() => nextDiningHall()}>Dining Hall</button>
+					</div>
 				</div>
 			</div>
 		</div>

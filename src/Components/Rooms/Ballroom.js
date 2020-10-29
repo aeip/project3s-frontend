@@ -39,18 +39,20 @@ export const BallRoom = (prop) => {
 						
 						<div className='madness-icon'>
 							{/* This is where we put the code to output the current madness number */}
-							<div className='madness-number'>{props.currentCharacter.MadnessLevel}</div>
+							<div className='madness-number'>{props.currentCharacter.MadnessLevel}
+                            </div>
 						</div>
 						
 					</div>
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-                    <button onClick={() => nextGreenhouse()}>Greenhouse Gardens</button>
-                    <button onClick={() => nextRecRoom()}>Rec Room</button>
-                    <button onClick={() => nextGrandHall()}>Grand Hall</button>
+					<div className='nav-buttons'>
+    					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+                        <button onClick={() => nextGreenhouse()}>Greenhouse Gardens</button>
+                        <button onClick={() => nextRecRoom()}>Rec Room</button>
+                        <button onClick={() => nextGrandHall()}>Grand Hall</button>
+					</div>
 				</div>
 			</div>
 		</div>
