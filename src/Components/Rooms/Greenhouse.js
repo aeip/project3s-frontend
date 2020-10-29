@@ -42,7 +42,9 @@ export const Greenhouse = (prop) => {
 				<div className='text-box'>
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-                    <button onClick={() => nextBallroom()}>Back to Ballroom</button>
+                    <div className='nav-buttons'>
+                        <button onClick={() => nextBallroom()}>Back to Ballroom</button>
+                    </div>
 				</div>
 			</div>
 		</div>

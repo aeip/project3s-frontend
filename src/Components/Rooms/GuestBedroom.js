@@ -42,8 +42,10 @@ export const GuestBedroom = (prop) => {
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
 					
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-					<button onClick={() => nextGrandhall()}>Back to Grandhall</button>
+					<div className='nav-buttons'>
+					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
+                        <button onClick={() => nextGrandHall()}>Grandhall</button>
+					</div>
 				</div>
 			</div>
 		</div>

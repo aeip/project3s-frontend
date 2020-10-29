@@ -11,7 +11,10 @@ export const MasterBedroom = (prop) => {
 	const nextStudy = () => {
 		props.history.push('/game/study/');
 	};
-
+    const nextGrandHall = () => {
+        props.history.push('/game/grandhall/')
+    }
+    
     return(
         <div className='greenhouse room'>
 			<h1>Master Bedroom</h1>
@@ -45,6 +48,7 @@ export const MasterBedroom = (prop) => {
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
 					<button onClick={() => nextStudy()}>Study</button>
+                    <button onClick={() => nextGrandHall()}>Grandhall</button>
 				</div>
 			</div>
 		</div>

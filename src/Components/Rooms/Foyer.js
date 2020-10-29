@@ -45,8 +45,9 @@ export const Foyer = (prop) => {
 				<div className='text-box'>
 					<p>You enter the foyer of the grand estate. A lone beam of moonlight shines down to the center of the room.</p> <p>Within it's pale glow is the flash of metal from a steel knife. Looks like someone dropped this in a hurry.</p>
 							
-					
-					<button onClick={() => nextRoom()}>Grand Hall</button>
+					<div className='nav-buttons'>
+						<button onClick={() => nextRoom()}>Grand Hall</button>
+					</div>
 				</div>
 			</div>
 		</div>

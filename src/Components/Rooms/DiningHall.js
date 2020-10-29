@@ -44,10 +44,11 @@ const DiningHall = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-                    <button onClick={() => nextGrandhall()}>Grandhall</button>
-                    <button onClick={() => nextKitchen()}>Kitchen</button>
+					<div className='nav-buttons'>  
+    					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+                        <button onClick={() => nextGrandhall()}>Grandhall</button>
+                        <button onClick={() => nextKitchen()}>Kitchen</button>
+					</div>
 				</div>
 			</div>
 		</div>
