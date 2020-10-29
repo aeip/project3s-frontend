@@ -3,7 +3,11 @@ import '../Styles/Rooms/RecRoom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-export const RecRoom = () => {
+export const RecRoom = (prop) => {
+
+	let props = prop.props;
+	props.handleUpdateCharacterRoom(props.currentCharacter, 'Rec Room');
+	
     return(
         <div className='greenhouse room'>
 			<h1>Rec Room</h1>

@@ -4,7 +4,7 @@ import {Dropdown} from 'react-bootstrap'
 
 export const Inventory = (prop) => {
 	let props = prop.props
-	
+	console.log('eh',props)
 
 	return (
 		<div className='inventory'>

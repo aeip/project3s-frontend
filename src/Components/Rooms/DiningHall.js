@@ -3,7 +3,11 @@ import '../Styles/Rooms/DiningHall.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-const DiningHall = () => {
+const DiningHall = (prop) => {
+
+    let props = prop.props;
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
+
     return(
         <div className='dininghall room'>
 			<h1>Dining Hall</h1>

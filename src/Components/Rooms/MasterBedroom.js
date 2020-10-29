@@ -3,7 +3,11 @@ import '../Styles/Rooms/MasterBedroom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-export const MasterBedroom = () => {
+export const MasterBedroom = (prop) => {
+
+	let props = prop.props;
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Master Bedroom');
+
     return(
         <div className='greenhouse room'>
 			<h1>Master Bedroom</h1>

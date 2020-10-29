@@ -12,6 +12,9 @@ export const Grandhall = (prop) => {
 	const nextCourtyard = () => {
 		props.history.push('/game/courtyard/');
 	};
+	const nextFoyer = () => {
+		props.history.push('/game/');
+	};
 	const nextDiningHall = () => {
 		props.history.push('/game/dininghall/');
 	};
@@ -65,7 +68,7 @@ export const Grandhall = (prop) => {
 					<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
 					<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
 				</DropdownButton>
-				<button>Back to Foyer</button>
+				<button onClick={() => nextFoyer()}>Back to Foyer</button>
 				</div>
 			</div>
 		</div>
