@@ -43,8 +43,13 @@ export const Foyer = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					<p>You enter the foyer of the grand estate. A lone beam of moonlight shines down to the center of the room.</p> <p>Within it's pale glow is the flash of metal from a steel knife. Looks like someone dropped this in a hurry.</p>
-							
+					<p>The entrance for the Dunwich estate. A lone beam of pale blue light shines down to the center of the room. Apparently the moon is the only thing to greet you this evening.</p> 
+					<div className='situations'>
+						{/* this is where we'll be putting the situations for things like effects and item pickup */}
+
+					</div>
+					<br />
+					<p>No sense in turning back, the only other way is into the Great Hall.</p>		
 					<div className='nav-buttons'>
 						<button onClick={() => nextRoom()}>Grand Hall</button>
 					</div>
