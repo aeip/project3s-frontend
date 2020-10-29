@@ -3,7 +3,7 @@ import '../Styles/Rooms/BallRoom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-const BallRoom = () => {
+export const BallRoom = () => {
     return(
         <div className='ballroom room'>
 			<h1>Ball Room</h1>
@@ -40,5 +40,3 @@ const BallRoom = () => {
 		</div>
     )
 }
-
-export default Ballroom
