@@ -8,11 +8,14 @@ export const GuestBedroom = (prop) => {
 	let props = prop.props;
 	props.handleUpdateCharacterRoom(props.currentCharacter, 'Guest Bedroom');
 
-	const nextGrandHall = () => {
+	const nextGrandhall = () => {
         props.history.push('/game/grandhall/')
 	}
 	
 	const [hasKey, setHasKey] = useState(false);
+	if(props.currenCharacter.inventory.includes('Greenhouse Key')){
+        setHasKey(true)
+    }
 	const pickUpKey = () => {
 		if (!hasKey) {
 			

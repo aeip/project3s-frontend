@@ -6,13 +6,16 @@ export const Kitchen = (prop) => {
     let props = prop.props;
     props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
     const [hasKnife, setHasKnife] = useState(false);
+    if(props.currenCharacter.inventory.includes('Knife')){
+        setHasKnife(true)
+    }
     const nextDiningHall = () => {
 		props.history.push('/game/dininghall/');
     };
     
     const pickUpKnife = () => {
 		if (!hasKnife) {
-			props.handleUpdateCharacter(props.currentCharacter, 'knife');
+			props.handleUpdateCharacter(props.currentCharacter, 'Knife');
 			setHasKnife(true);
 		}
 	};
