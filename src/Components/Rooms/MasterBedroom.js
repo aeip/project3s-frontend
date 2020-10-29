@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Sttyles/Rooms/MasterBedroom'
+import '../Styles/Rooms/MasterBedroom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 

@@ -21,9 +21,6 @@ export const Grandhall = (prop) => {
 	const nextRecRoom = () => {
 		props.history.push('/game/recroom/');
 	};
-	const nextArtGallery = () => {
-		props.history.push('/game/artgallery/');
-	};
 	const nextMasterBedroom = () => {
 		props.history.push('/game/masterbedroom/');
 	};
@@ -48,12 +45,12 @@ export const Grandhall = (prop) => {
 					<div className='health'>
 						<div className='health-icon'>
 							{/* This is where we insert the code that calls the current number for health */}
-							<div className='health-number'>100</div>
+							<div className='health-number'>{props.currentCharacter.HP}</div>
 						</div>
 						
 						<div className='madness-icon'>
 							{/* This is where we put the code to output the current madness number */}
-							<div className='madness-number'>5</div>
+							<div className='madness-number'>{props.currentCharacter.MadnessLevel}</div>
 						</div>
 						
 					</div>
@@ -64,11 +61,11 @@ export const Grandhall = (prop) => {
 					<Dropdown.Item ><button onClick={() => nextCourtyard()}>Courtyard</button></Dropdown.Item>
 					<Dropdown.Item ><button onClick={() => nextGuestBedroom()}>Guest Bedroom</button></Dropdown.Item>
 					<Dropdown.Item ><button onClick={() => nextMasterBedroom()}>Master Bedroom</button></Dropdown.Item>
-					<Dropdown.Item ><button onClick={() => nextArtGallery()}>Art Gallery</button></Dropdown.Item>
 					<Dropdown.Item ><button onClick={() => nextBallroom()}>Ballroom</button></Dropdown.Item>
 					<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
 					<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
 				</DropdownButton>
+				<button>Back to Foyer</button>
 				</div>
 			</div>
 		</div>

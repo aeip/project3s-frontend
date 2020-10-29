@@ -4,7 +4,12 @@ import {Foyer} from './Foyer';
 import {Grandhall} from './Grandhall';
 import {Courtyard} from './Courtyard';
 import {GuestBedroom} from './GuestBedroom'
-import {Win} from '../Titles/Win';
+import DiningHall from './DiningHall'
+import {BallRoom} from './Ballroom'
+import {RecRoom} from './RecRoom'
+import {Study} from './Study'
+import {Win} from '../Titles/Win'; 
+import { MasterBedroom } from './MasterBedroom';
 
 export const Rooms = (prop) => {
 	let props = prop.props;
@@ -28,6 +33,31 @@ export const Rooms = (prop) => {
 					exact
 					path='/game/courtyard'
 					render={(rp) => <Courtyard {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/dininghall'
+					render={(rp) => <DiningHall {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/guestbedroom'
+					render={(rp) => <GuestBedroom {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/masterbedroom'
+					render={(rp) => <MasterBedroom {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/recroom'
+					render={(rp) => <RecRoom {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/ballroom'
+					render={(rp) => <BallRoom {...rp} props={props} />}
 				/>
 				<Route
 					exact
