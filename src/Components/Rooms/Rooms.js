@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import {Foyer} from './Foyer';
 import {Grandhall} from './Grandhall';
 import {Courtyard} from './Courtyard';
+import {GuestBedroom} from './GuestBedroom'
 import {Win} from '../Titles/Win';
 
 export const Rooms = (prop) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/Rooms/GuestBedrooms.scss'
+import '../Styles/Rooms/GuestBedroom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 

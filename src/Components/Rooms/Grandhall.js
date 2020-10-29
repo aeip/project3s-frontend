@@ -2,13 +2,35 @@ import React from 'react';
 import '../Styles/Rooms/GrandHall.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
+import {DropdownButton} from 'react-bootstrap'
+import {Dropdown} from 'react-bootstrap'
 
 export const Grandhall = (prop) => {
     let props = prop.props;
-    props.handleUpdateCharacterRoom(props.currentCharacter, 'Grandhall');
-	const nextRoom = () => {
+	props.handleUpdateCharacterRoom(props.currentCharacter, 'Grandhall');
+	
+	const nextCourtyard = () => {
 		props.history.push('/game/courtyard/');
 	};
+	const nextDiningHall = () => {
+		props.history.push('/game/dininghall/');
+	};
+	const nextBallroom = () => {
+		props.history.push('/game/ballroom/');
+	};
+	const nextRecRoom = () => {
+		props.history.push('/game/recroom/');
+	};
+	const nextArtGallery = () => {
+		props.history.push('/game/artgallery/');
+	};
+	const nextMasterBedroom = () => {
+		props.history.push('/game/masterbedroom/');
+	};
+	const nextGuestBedroom = () => {
+		props.history.push('/game/guestbedroom/');
+	};
+
 	return (
 		<div className='grandhall room'>
 			<h1>Grand Hall</h1>
@@ -38,8 +60,15 @@ export const Grandhall = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
-					<button onClick={() => nextRoom()}>Next Room</button>
+				<DropdownButton id="dropdown-basic-button" title="Where to?">
+					<Dropdown.Item ><button onClick={() => nextCourtyard()}>Courtyard</button></Dropdown.Item>
+					<Dropdown.Item ><button onClick={() => nextGuestBedroom()}>Guest Bedroom</button></Dropdown.Item>
+					<Dropdown.Item ><button onClick={() => nextMasterBedroom()}>Master Bedroom</button></Dropdown.Item>
+					<Dropdown.Item ><button onClick={() => nextArtGallery()}>Art Gallery</button></Dropdown.Item>
+					<Dropdown.Item ><button onClick={() => nextBallroom()}>Ballroom</button></Dropdown.Item>
+					<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
+					<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
+				</DropdownButton>
 				</div>
 			</div>
 		</div>
