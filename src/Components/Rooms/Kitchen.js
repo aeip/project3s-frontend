@@ -60,9 +60,8 @@ export const Kitchen = (prop) => {
                     <button onClick={() => pickUpKnife()}>Pick up knife</button>
 					</div>
 					<br />
-                
-
 					<div className='nav-buttons'>
+                        {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextDiningHall()}>Dining Hall</button>
 					</div>
