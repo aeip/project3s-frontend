@@ -14,9 +14,9 @@ export const MasterBedroom = (prop) => {
     const nextGrandHall = () => {
         props.history.push('/game/grandhall/')
     }
-    
+
     return(
-        <div className='greenhouse room'>
+        <div className='masterbedroom room'>
 			<h1>Master Bedroom</h1>
 
 			<div className='game-screen'>

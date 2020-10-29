@@ -1,23 +1,19 @@
 import React from 'react'
-import '../Styles/Rooms/RecRoom.scss'
+import '../Styles/Rooms/Study.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-export const RecRoom = (prop) => {
-
+export const ArtGallery = (prop) => {
 	let props = prop.props;
-	props.handleUpdateCharacterRoom(props.currentCharacter, 'Rec Room');
-	
-	const nextBallroom = () => {
-        props.history.push('/game/ballroom')
-	}
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
+
 	const nextGrandHall = () => {
         props.history.push('/game/grandhall/')
     }
 
     return(
-        <div className='recroom room'>
-			<h1>Rec Room</h1>
+        <div className='artgallery room'>
+			<h1>Study</h1>
 
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}
@@ -44,10 +40,10 @@ export const RecRoom = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-					<button onClick={() => nextGrandHall()}>Grandhall</button>
-					<button onClick={() => nextBallroom()}>Ballroom</button>
+					<div className='nav-buttons'>
+    					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+    					<button onClick={() => nextGrandHall()}>Grand Hall</button>
+					</div>
 				</div>
 			</div>
 		</div>
