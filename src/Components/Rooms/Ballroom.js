@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../Styles/Rooms/BallRoom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
@@ -16,6 +16,20 @@ export const BallRoom = (prop) => {
     const nextGrandHall = () => {
         props.history.push('/game/grandhall/')
     }
+
+    const [hasKey, setHasKey] = useState(false);
+    if(props.currenCharacter.inventory.includes('Guest Bedroom Key')){
+        setHasKey(true)
+    }
+	const pickUpKey = () => {
+		if (!hasKey) {
+			
+			props.handleUpdateCharacter(props.currentCharacter, 'Guest Bedroom Key');
+			setHasKey(true);
+		} else {
+			alert('You already have this key')
+		}
+	};
 
     return(
         <div className='ballroom room'>
@@ -54,6 +68,7 @@ export const BallRoom = (prop) => {
                         <button onClick={() => nextGreenhouse()}>Greenhouse Gardens</button>
                         <button onClick={() => nextRecRoom()}>Rec Room</button>
                         <button onClick={() => nextGrandHall()}>Grand Hall</button>
+                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
 				</div>
 			</div>
