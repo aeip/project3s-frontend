@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../Styles/Rooms/Courtyard.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
@@ -6,7 +6,9 @@ import '../Styles/UserInterface/CharacterPanel.scss'
 export const Courtyard = (prop) => {
     let props = prop.props;
     props.handleUpdateCharacterRoom(props.currentCharacter, 'Courtyard');
-console.log(props)
+	console.log(props)
+
+	const [isDead, setisDead] = useState(false)
     const nextGrandhall = () => {
         props.history.push('/game/grandhall/')
     }
@@ -14,12 +16,16 @@ console.log(props)
 		if(props.currentCharacter.inventory.includes('Mysterious Key') && props.currentCharacter.inventory.includes('Knife')){
 			props.history.push('/win/');
 		} else if(props.currentCharacter.inventory.includes('Mysterious Key')){
+			setisDead(true)
 			props.deathReason(3)
-			props.history.push('/lose/')
+			setTimeout(dead, 3000)
 		}else{
 			alert("The door is locked")
 		}
-    }
+	}
+	const dead = () => {
+		props.history.push('/lose/')
+	}
     return (
 		<div className='courtyard room'>
 			<h1>Courtyard</h1>
@@ -29,7 +35,7 @@ console.log(props)
 				<div className='background'>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						<img src='https://i.imgur.com/pNOztsH.png' />
+						{isDead ? <img src='https://images.unsplash.com/photo-1553465528-5a213ccc0c7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80'></img> : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>
