@@ -6,7 +6,7 @@ import '../Styles/UserInterface/CharacterPanel.scss'
 
 export const ArtGallery = (prop) => {
 	let props = prop.props;
-    props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Art Gallery');
 
 	const nextGrandHall = () => {
         props.history.push('/game/grandhall/')
@@ -14,7 +14,7 @@ export const ArtGallery = (prop) => {
 
     return(
         <div className='artgallery room'>
-			<h1>Study</h1>
+			<h1>Art Gallery</h1>
 
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}

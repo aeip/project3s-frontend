@@ -36,6 +36,9 @@ export const Grandhall = (prop) => {
 	const nextMasterBedroom = () => {
 		props.history.push('/game/masterbedroom/');
 	};
+	const nextArtGallery = () => {
+		props.history.push('/game/artgallery');
+	};
 	const nextGuestBedroom = () => {
 		if(props.currentCharacter.inventory.includes('Guest Bedroom Key')){
 			props.history.push('/game/guestbedroom/');
@@ -91,6 +94,7 @@ export const Grandhall = (prop) => {
 						<Dropdown.Item ><button onClick={() => nextBallroom()}>Ballroom</button></Dropdown.Item> 
 						<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextArtGallery()}>Art Gallery</button></Dropdown.Item>
 					</DropdownButton>
 					<button onClick={() => nextFoyer()}>Back to Foyer</button>
 					</div>

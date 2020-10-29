@@ -13,13 +13,12 @@ import {Win} from '../Titles/Win';
 import {Death} from '../Titles/Death';
 import { MasterBedroom } from './MasterBedroom';
 import {Kitchen} from './Kitchen';
+import {ArtGallery} from './ArtGallery'
 
 
 export const Rooms = (prop) => {
 	let props = prop.props;
-	const handleRooms = () => {
-
-	};
+	
 	return (
 		<div className='rooms'>
 			<Switch>
@@ -27,6 +26,11 @@ export const Rooms = (prop) => {
 					exact
 					path='/game'
 					render={(rp) => <Foyer {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/artgallery'
+					render={(rp) => <ArtGallery {...rp} props={props} />}
 				/>
 				<Route
 					exact

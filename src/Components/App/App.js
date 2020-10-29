@@ -1,6 +1,7 @@
 //Import Basics
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import axios from 'axios'
 import './App.css';
 //Game Component
 import { Game } from '../Game/Game';
@@ -10,6 +11,7 @@ import { Titles } from '../Titles/Titles';
 import { Scoreboard } from '../Scoreboard/Scoreboard';
 import {Win} from '../Titles/Win'
 import {Death} from '../Titles/Death'
+import {About} from '../Titles/About'
 
 function App() {
 	//vars
@@ -45,11 +47,11 @@ function App() {
 
 	//get methods
 	const getScoreboard = () => {
-		fetch(url + '/score/')
-			.then((response) => response.json())
-			.then((data) => {
-				setScoreboards(data);
-			});
+		axios({
+			url: url + '/score',
+			
+		}).then((response) => setScoreboards(response.data))
+			
 	};
 
 	const handleSignIn = (character) => {
@@ -113,7 +115,7 @@ function App() {
 			headers: {
 				'Content-Type': 'application/json'
 			}
-		})
+		}).then(response => getScoreboard())
 	}
 
 	//useEffect
@@ -174,7 +176,7 @@ function App() {
 					path='/score/'
 					render={(rp) => (
 						<>
-							<Scoreboard />
+							<Scoreboard {...rp} scoreboard={scoreboards} />
 						</>
 					)}
 				/>
@@ -191,6 +193,7 @@ function App() {
 					path='/lose'
 					render={(rp) => <Death {...rp}  death={death}/>}
 				/>
+				<Route exact path='/about' component={About} />
 			</Switch>
 		</div>
 	);
