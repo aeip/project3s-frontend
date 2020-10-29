@@ -10,7 +10,9 @@ export const GuestBedroom = (prop) => {
 
 	const nextGrandhall = () => {
         props.history.push('/game/grandhall/')
-    }
+	}
+	
+
 	
     return(
         <div className='greenhouse room'>
@@ -44,7 +46,8 @@ export const GuestBedroom = (prop) => {
 					
 					<div className='nav-buttons'>
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
-                        <button onClick={() => nextGrandHall()}>Grandhall</button>
+                        <button onClick={() => nextGrandhall()}>Grandhall</button>
+						<button onClick={() => nextGrandHall()}>Grandhall</button>
 					</div>
 				</div>
 			</div>
