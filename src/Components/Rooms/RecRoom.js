@@ -29,7 +29,7 @@ export const RecRoom = (prop) => {
 	};
 
     return(
-        <div className='greenhouse room'>
+        <div className='recroom room'>
 			<h1>Rec Room</h1>
 
 			<div className='game-screen'>

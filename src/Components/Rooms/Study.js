@@ -25,7 +25,7 @@ export const Study = (prop) => {
 	};
 
     return(
-        <div className='greenhouse room'>
+        <div className='study room'>
 			<h1>Study</h1>
 
 			<div className='game-screen'>
@@ -53,10 +53,11 @@ export const Study = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-					<button onClick={() => nextMasterBedroom()}>Back to Master Bedroom</button>
-					<button onClick={() => pickUpKey()}>Pick Up Key</button>
+					<div className='nav-buttons'>
+    					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+    					<button onClick={() => nextMasterBedroom()}>Back to Master Bedroom</button>
+						<button onClick={() => pickUpKey()}>Pick Up Key</button>
+					</div>
 				</div>
 			</div>
 		</div>

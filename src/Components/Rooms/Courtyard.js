@@ -6,6 +6,10 @@ import '../Styles/UserInterface/CharacterPanel.scss'
 export const Courtyard = (prop) => {
     let props = prop.props;
     props.handleUpdateCharacterRoom(props.currentCharacter, 'Courtyard');
+
+    const nextGrandhall = () => {
+        props.history.push('/game/grandhall/')
+    }
     const nextRoom = () => {
         props.history.push('/game/fin/');
     }
@@ -39,6 +43,7 @@ export const Courtyard = (prop) => {
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
 					<div className='nav-buttons'>
+                        <button onClick={() => nextGrandhall()}>Grandhall</button>
                         <button onClick={() => nextRoom()}>Next Room</button>
                     </div>
 				</div>
