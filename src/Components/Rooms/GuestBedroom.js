@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../Styles/Rooms/GuestBedroom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
@@ -12,6 +12,16 @@ export const GuestBedroom = (prop) => {
         props.history.push('/game/grandhall/')
 	}
 	
+	const [hasKey, setHasKey] = useState(false);
+	const pickUpKey = () => {
+		if (!hasKey) {
+			
+			props.handleUpdateCharacter(props.currentCharacter, 'Greenhouse Key');
+			setHasKey(true);
+		} else {
+			alert('You already have this key')
+		}
+	};
 
 	
     return(
@@ -31,23 +41,27 @@ export const GuestBedroom = (prop) => {
 					<div className='health'>
 						<div className='health-icon'>
 							{/* This is where we insert the code that calls the current number for health */}
-							<div className='health-number'>100</div>
+							<div className='health-number'>{props.currentCharacter.HP}</div>
 						</div>
 						
 						<div className='madness-icon'>
 							{/* This is where we put the code to output the current madness number */}
-							<div className='madness-number'>5</div>
+							<div className='madness-number'>{props.currentCharacter.MadnessLevel}</div>
 						</div>
 						
 					</div>
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
+				{hasKey ? (
+								<p>You picked up a key</p>
+							) : (
+								<p>Would you like to pick up a key?</p>
+							)}
 					<div className='nav-buttons'>
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextGrandhall()}>Grandhall</button>
-						<button onClick={() => nextGrandHall()}>Grandhall</button>
+						<button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
 				</div>
 			</div>

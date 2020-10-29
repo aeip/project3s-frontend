@@ -32,12 +32,12 @@ const DiningHall = (prop) => {
 					<div className='health'>
 						<div className='health-icon'>
 							{/* This is where we insert the code that calls the current number for health */}
-							<div className='health-number'>100</div>
+							<div className='health-number'>{props.currentCharacter.HP}</div>
 						</div>
 						
 						<div className='madness-icon'>
 							{/* This is where we put the code to output the current madness number */}
-							<div className='madness-number'>5</div>
+							<div className='madness-number'>{props.currentCharacter.MadnessLevel}</div>
 						</div>
 						
 					</div>
