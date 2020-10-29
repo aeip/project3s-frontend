@@ -3,34 +3,63 @@
         .character-panel {
             
             background-color: slategray;
-            border-style: solid;
+            // border-style: solid;
             border-width: 1px;
             height: 50px;
             display: flex;
             align-content: flex-start;
             
             .character {
-                border-style: solid;
-                border-width: 1px;
-                background-image: url('https://i.imgur.com/pNOztsH.png');
+                border-style: inset;
+                border-width: 3px;
+                border-color: darkslategray;
+                background-image: url('https://i.imgur.com/pNOztsH.png'), linear-gradient(to top, rgb(12, 0, 0), rgb(133, 21, 1));
                 background-repeat: no-repeat;
+                
+                background-position: center;
                 background-size: contain;
-                height: 50px;
-                width: 50px;
-                margin: 1.5px;
-                height: 90%;
+                height: 85%;
+                margin: 1px;
+                width: 45px;
             }
             .health {
-                    width: 100%;
+                    border-style: solid;
+                    border-width: 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: fit-content;
+                    // margin: 2px;
                 .health-icon {
                     border-style: solid;
                     border-width: 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     background-image: url('https://i.imgur.com/ulx726R.png');
                     background-repeat: no-repeat;
                     background-size: contain;
-                    display: flex;
-                    height: 50px;
+                    height: 40px;
+                    width: 40px;
                     
+                }
+                .health-number {
+                    font-weight: bold;
+                }
+                .madness-icon {
+                    border-style: solid;
+                    border-width: 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url('https://i.imgur.com/bzH7jSm.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 40px;
+                    width: 40px;
+                }
+                .madness-number {
+                    font-weight: bold;
                 }
             }
         }
@@ -44,12 +73,23 @@
                 height: 100px;
                 .character {
                     margin: 5px;
-                    width: 100px;
+                    width: 95px;
                     
                 }
                 .health {
                     .health-icon {
-                        
+                        width: 100px;
+                        height: 100%;
+                    }
+                    .health-number {
+                        font-size: 25px;
+                    }
+                    .madness-icon {
+                        width: 100px;
+                        height: 100%;
+                    }
+                    .madness-number {
+                        font-size: 25px;
                     }
                 }
             }
