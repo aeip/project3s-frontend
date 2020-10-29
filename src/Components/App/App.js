@@ -19,14 +19,14 @@ function App() {
 	const [death, setDeath] = useState('')
 	
 	//handle death reason
-	const deathReason = (number) => {
-		
-		if(number = 1){ //health hit 0
+	const deathReason = (num) => {
+		console.log('num', num)
+		if(num === 1){ //health hit 0
 			setDeath('You ran out of life...')
-		}else if (number = 2){ //madness over 15
+		}else if (num === 2){ //madness over 15
 			setDeath('The mansion drove you insane...')
-		} else if (number = 3){ //bad ending
-			setDeath("Something did not want you there")
+		} else if (num === 3){ //bad ending
+			setDeath("Something did not want you there. You need to defend yourself...")
 		}
 	}
 
@@ -164,6 +164,7 @@ function App() {
 								handleStart={handleStart}
 								handleWin={handleWin}
 								handleDeath={handleDeath}
+								deathReason={deathReason}
 							/>
 						</>
 					)}
@@ -180,12 +181,15 @@ function App() {
 				<Route
 					exact
 					path='/win'
-					render={(rp) => <Win {...rp}  />}
+					render={(rp) => <Win {...rp} 
+					currentCharacter={currentCharacter} 
+					handleUpdateCharacterScore={handleUpdateCharacterScore}
+					/>}
 				/>
 				<Route
 					exact
 					path='/lose'
-					render={(rp) => <Death {...rp}  />}
+					render={(rp) => <Death {...rp}  death={death}/>}
 				/>
 			</Switch>
 		</div>

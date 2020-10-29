@@ -7,7 +7,7 @@ import '../Styles/UserInterface/CharacterPanel.scss'
 export const Courtyard = (prop) => {
     let props = prop.props;
     props.handleUpdateCharacterRoom(props.currentCharacter, 'Courtyard');
-
+console.log(props)
     const nextGrandhall = () => {
         props.history.push('/game/grandhall/')
     }
@@ -15,6 +15,7 @@ export const Courtyard = (prop) => {
 		if(props.currentCharacter.inventory.includes('Mysterious Key') && props.currentCharacter.inventory.includes('Knife')){
 			props.history.push('/win/');
 		} else if(props.currentCharacter.inventory.includes('Mysterious Key')){
+			props.deathReason(3)
 			props.history.push('/lose/')
 		}else{
 			alert("The door is locked")
