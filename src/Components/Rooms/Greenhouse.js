@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../Styles/Rooms/Greenhouse.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
@@ -10,6 +10,19 @@ export const Greenhouse = (prop) => {
     const nextBallroom = () => {
         props.history.push('/game/ballroom')
     }
+
+    const [hasKey, setHasKey] = useState(false);
+	
+	const pickUpKey = () => {
+		if(props.currentCharacter.inventory.includes('Dining Hall Key')){
+			setHasKey(true)
+			return
+		} else if (!hasKey) {
+			
+			props.handleUpdateCharacter(props.currentCharacter, 'Dining Hall Key');
+			setHasKey(true);
+		} 
+	};
 
     return(
         <div className='greenhouse room'>
@@ -44,6 +57,7 @@ export const Greenhouse = (prop) => {
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
                     <div className='nav-buttons'>
                         <button onClick={() => nextBallroom()}>Back to Ballroom</button>
+                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
                     </div>
 				</div>
 			</div>

@@ -1,14 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../Styles/Rooms/Study.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
 export const Study = (prop) => {
 	let props = prop.props;
-    props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Study');
 
 	const nextMasterBedroom = () => {
 		props.history.push('/game/masterbedroom/');
+	};
+
+	const [hasKey, setHasKey] = useState(false);
+	
+	const pickUpKey = () => {
+		if(props.currentCharacter.inventory.includes('Rec Room Key')){
+			setHasKey(true)
+			return
+		} else if (!hasKey) {
+			
+			props.handleUpdateCharacter(props.currentCharacter, 'Rec Room Key');
+			setHasKey(true);
+		} 
 	};
 
     return(
@@ -43,6 +56,7 @@ export const Study = (prop) => {
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
 					<button onClick={() => nextMasterBedroom()}>Back to Master Bedroom</button>
+					<button onClick={() => pickUpKey()}>Pick Up Key</button>
 				</div>
 			</div>
 		</div>

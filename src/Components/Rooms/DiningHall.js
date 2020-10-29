@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../Styles/Rooms/DiningHall.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
@@ -14,6 +14,19 @@ const DiningHall = (prop) => {
     const nextKitchen = () => {
         props.history.push('/game/kitchen/')
     }
+
+    const [hasKey, setHasKey] = useState(false);
+	
+	const pickUpKey = () => {
+		if(props.currentCharacter.inventory.includes('Study Key')){
+			setHasKey(true)
+			return
+		} else if (!hasKey) {
+			
+			props.handleUpdateCharacter(props.currentCharacter, 'Study Key');
+			setHasKey(true);
+		} 
+	};
 
     return(
         <div className='dininghall room'>
@@ -48,6 +61,7 @@ const DiningHall = (prop) => {
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextGrandhall()}>Grandhall</button>
                         <button onClick={() => nextKitchen()}>Kitchen</button>
+                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
 				</div>
 			</div>
