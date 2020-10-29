@@ -1,17 +1,12 @@
-import React from 'react';
-import '../Styles/Rooms/GrandHall.scss'
+import React from 'react'
+import '../Styles/Rooms/RecRoom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-export const Grandhall = (prop) => {
-    let props = prop.props;
-    props.handleUpdateCharacterRoom(props.currentCharacter, 'Grandhall');
-	const nextRoom = () => {
-		props.history.push('/game/courtyard/');
-	};
-	return (
-		<div className='grandhall room'>
-			<h1>Grand Hall</h1>
+export const RecRoom = () => {
+    return(
+        <div className='greenhouse room'>
+			<h1>Rec Room</h1>
 
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}
@@ -39,9 +34,9 @@ export const Grandhall = (prop) => {
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
 					
-					<button onClick={() => nextRoom()}>Next Room</button>
+					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
 				</div>
 			</div>
 		</div>
-	);
-};
+    )
+}

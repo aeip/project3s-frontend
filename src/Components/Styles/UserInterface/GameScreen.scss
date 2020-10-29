@@ -1,13 +1,18 @@
 .game-screen {
-    border-style: solid;
-    border-width: 2px;
-    border-color: red;
+    border-style: ridge;
+    border-width: 3px;
+    border-radius: 8px;
+    border-color: goldenrod;
+    background-color: gray;
     margin: auto;
-    width: 90%;
+    width: 92%;
     max-width: 600px;
 
     .background {
-        // border-style: solid;
+        border-style: ridge;
+        border-width: 5px;
+        border-color: goldenrod;
+        border-radius: 5px;
         max-height: 600px;
         background-size: cover;
         background-position: center;
@@ -21,14 +26,16 @@
             width: 100%;
             img {
                 margin: auto;
-                width: 40%;
+                width: 50%;
             }  
         }
     }
     .text-box {
-        border-style: solid;
-        border-width: 2px;
-        border-color: green;
+        // border-style: ridge;
+        border-width: 5px;
+        border-color: goldenrod;
+        background-color: rgb(17, 17, 17);
+        color: white;
         margin: auto;
         padding: 5px;
         // display: block;
