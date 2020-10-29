@@ -53,6 +53,11 @@ export const Study = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
+                    <div className='situations'>
+						{/* this is where we'll be putting the situations for things like effects and item pickup */}
+
+					</div>
+					<br />
 					<div className='nav-buttons'>
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
     					<button onClick={() => nextMasterBedroom()}>Back to Master Bedroom</button>

@@ -50,12 +50,17 @@ export const Kitchen = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-                {hasKnife ? (
+                    <div className='situations'>
+						{/* this is where we'll be putting the situations for things like effects and item pickup */}
+                        {hasKnife ? (
 								<p>You picked up a knife</p>
 							) : (
 								<p>Would you like to pick up a knife?</p>
 							)}
                     <button onClick={() => pickUpKnife()}>Pick up knife</button>
+					</div>
+					<br />
+                
 
 					<div className='nav-buttons'>
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}

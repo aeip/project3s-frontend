@@ -53,9 +53,13 @@ export const Greenhouse = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+					<div className='situations'>
+						{/* this is where we'll be putting the situations for things like effects and item pickup */}
+
+					</div>
+					<br />
                     <div className='nav-buttons'>
+                        {/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextBallroom()}>Back to Ballroom</button>
                         <button onClick={() => pickUpKey()}>Pick Up Key</button>
                     </div>
