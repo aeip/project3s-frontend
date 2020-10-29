@@ -3,7 +3,14 @@ import '../Styles/Rooms/Study.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-export const Study = () => {
+export const Study = (prop) => {
+	let props = prop.props;
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
+
+	const nextMasterBedroom = () => {
+		props.history.push('/game/masterbedroom/');
+	};
+
     return(
         <div className='greenhouse room'>
 			<h1>Study</h1>
@@ -35,6 +42,7 @@ export const Study = () => {
 				<div className='text-box'>
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+					<button onClick={() => nextMasterBedroom()}>Back to Master Bedroom</button>
 				</div>
 			</div>
 		</div>

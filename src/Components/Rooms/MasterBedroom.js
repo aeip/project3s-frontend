@@ -8,6 +8,10 @@ export const MasterBedroom = (prop) => {
 	let props = prop.props;
     props.handleUpdateCharacterRoom(props.currentCharacter, 'Master Bedroom');
 
+	const nextStudy = () => {
+		props.history.push('/game/study/');
+	};
+
     return(
         <div className='greenhouse room'>
 			<h1>Master Bedroom</h1>
@@ -38,7 +42,9 @@ export const MasterBedroom = (prop) => {
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
 					
+					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+					<button onClick={() => nextStudy()}>Study</button>
 				</div>
 			</div>
 		</div>

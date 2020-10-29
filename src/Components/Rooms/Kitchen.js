@@ -2,7 +2,14 @@ import React from 'react'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
-export const Kitchen = () => {
+export const Kitchen = (prop) => {
+    let props = prop.props;
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
+
+    const nextDiningHall = () => {
+		props.history.push('/game/dininghall/');
+	};
+
     return(
         <div className='kitchen room'>
 			<h1>Kitchen</h1>
@@ -34,6 +41,7 @@ export const Kitchen = () => {
 				<div className='text-box'>
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+                    <button onClick={() => nextDiningHall()}>Dining Hall</button>
 				</div>
 			</div>
 		</div>

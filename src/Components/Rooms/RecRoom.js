@@ -8,6 +8,13 @@ export const RecRoom = (prop) => {
 	let props = prop.props;
 	props.handleUpdateCharacterRoom(props.currentCharacter, 'Rec Room');
 	
+	const nextBallroom = () => {
+        props.history.push('/game/ballroom')
+	}
+	const nextGrandHall = () => {
+        props.history.push('/game/grandhall/')
+    }
+
     return(
         <div className='greenhouse room'>
 			<h1>Rec Room</h1>
@@ -25,12 +32,12 @@ export const RecRoom = (prop) => {
 					<div className='health'>
 						<div className='health-icon'>
 							{/* This is where we insert the code that calls the current number for health */}
-							<div className='health-number'>100</div>
+							<div className='health-number'>{props.currentCharacter.HP}</div>
 						</div>
 						
 						<div className='madness-icon'>
 							{/* This is where we put the code to output the current madness number */}
-							<div className='madness-number'>5</div>
+							<div className='madness-number'>{props.currentCharacter.MadnessLevel}</div>
 						</div>
 						
 					</div>
@@ -39,6 +46,8 @@ export const RecRoom = (prop) => {
 				<div className='text-box'>
 					
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
+					<button onClick={() => nextGrandHall()}>Grandhall</button>
+					<button onClick={() => nextBallroom()}>Ballroom</button>
 				</div>
 			</div>
 		</div>
