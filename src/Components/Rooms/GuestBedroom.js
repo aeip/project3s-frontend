@@ -7,11 +7,11 @@ export const GuestBedroom = (prop) => {
 
 	let props = prop.props;
 	props.handleUpdateCharacterRoom(props.currentCharacter, 'Guest Bedroom');
-    
-    const nextGrandHall = () => {
+
+	const nextGrandhall = () => {
         props.history.push('/game/grandhall/')
     }
-    
+	
     return(
         <div className='greenhouse room'>
 			<h1>Guest Bedroom</h1>
