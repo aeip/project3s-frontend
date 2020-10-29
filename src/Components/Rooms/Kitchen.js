@@ -1,13 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
 export const Kitchen = (prop) => {
     let props = prop.props;
     props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
-
+    const [hasKnife, setHasKnife] = useState(false);
     const nextDiningHall = () => {
 		props.history.push('/game/dininghall/');
+    };
+    
+    const pickUpKnife = () => {
+		if (!hasKnife) {
+			props.currentCharacter.inventory.push('knife');
+			props.handleUpdateCharacter(props.currentCharacter, 'knife');
+			setHasKnife(true);
+		}
 	};
 
     return(
@@ -39,9 +47,14 @@ export const Kitchen = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					
+                {hasKnife ? (
+								<p>You picked up a knife</p>
+							) : (
+								<p>Would you like to pick up a knife?</p>
+							)}
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
                     <button onClick={() => nextDiningHall()}>Dining Hall</button>
+                    <button onClick={() => pickUpKnife()}>Pick up knife</button>
 				</div>
 			</div>
 		</div>
