@@ -34,7 +34,8 @@ export const BallRoom = (prop) => {
 					<div className='health'>
 						<div className='health-icon'>
 							{/* This is where we insert the code that calls the current number for health */}
-							<div className='health-number'>{props.currentCharacter.HP}</div>
+							<div className='health-number'>{props.currentCharacter.HP}
+                            </div>
 						</div>
 						
 						<div className='madness-icon'>
@@ -47,6 +48,7 @@ export const BallRoom = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
+                    
 					<div className='nav-buttons'>
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextGreenhouse()}>Greenhouse Gardens</button>
