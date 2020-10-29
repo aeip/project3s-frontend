@@ -9,7 +9,11 @@ export const MasterBedroom = (prop) => {
     props.handleUpdateCharacterRoom(props.currentCharacter, 'Master Bedroom');
 
 	const nextStudy = () => {
-		props.history.push('/game/study/');
+		if(props.currentCharacter.inventory.includes('Study Key')){
+			props.history.push('/game/study/');
+		} else {
+			alert("The door is locked")
+		}
 	};
     const nextGrandHall = () => {
         props.history.push('/game/grandhall/')

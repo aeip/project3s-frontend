@@ -11,7 +11,13 @@ export const Courtyard = (prop) => {
         props.history.push('/game/grandhall/')
     }
     const nextRoom = () => {
-        props.history.push('/game/fin/');
+		if(props.currentCharacter.inventory.includes('Mysterious Key') && props.currentCharacter.inventory.includes('Knife')){
+			props.history.push('/game/win/');
+		} else if(props.currentCharacter.inventory.includes('Mysterious Key')){
+			props.history.push('/game/lose/')
+		}else{
+			alert("The door is locked")
+		}
     }
     return (
 		<div className='courtyard room'>

@@ -10,6 +10,7 @@ import {RecRoom} from './RecRoom';
 import {Study} from './Study';
 import {Greenhouse} from './Greenhouse';
 import {Win} from '../Titles/Win'; 
+import {Lose} from '../Titles/Lose';
 import { MasterBedroom } from './MasterBedroom';
 import {Kitchen} from './Kitchen';
 
@@ -79,8 +80,13 @@ export const Rooms = (prop) => {
 				/>
 				<Route
 					exact
-					path='/game/fin'
+					path='/game/win'
 					render={(rp) => <Win {...rp} props={props} />}
+				/>
+				<Route
+					exact
+					path='/game/lose'
+					render={(rp) => <Lose {...rp} props={props} />}
 				/>
 			</Switch>
 		</div>
