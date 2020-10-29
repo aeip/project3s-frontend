@@ -18,17 +18,15 @@ export const BallRoom = (prop) => {
     }
 
     const [hasKey, setHasKey] = useState(false);
-    if(props.currenCharacter.inventory.includes('Guest Bedroom Key')){
-        setHasKey(true)
-    }
+    
 	const pickUpKey = () => {
-		if (!hasKey) {
-			
+        if(props.currentCharacter.inventory.includes('Guest Bedroom Key')){
+            setHasKey(true)
+            return
+        } else if (!hasKey) {
 			props.handleUpdateCharacter(props.currentCharacter, 'Guest Bedroom Key');
 			setHasKey(true);
-		} else {
-			alert('You already have this key')
-		}
+		} 
 	};
 
     return(

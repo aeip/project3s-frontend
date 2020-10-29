@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../Styles/Rooms/RecRoom.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
@@ -13,7 +13,20 @@ export const RecRoom = (prop) => {
 	}
 	const nextGrandHall = () => {
         props.history.push('/game/grandhall/')
-    }
+	}
+	
+	const [hasKey, setHasKey] = useState(false);
+	
+	const pickUpKey = () => {
+		if(props.currentCharacter.inventory.includes('Mysterious Key')){
+			setHasKey(true)
+			return
+		} else if (!hasKey) {
+			
+			props.handleUpdateCharacter(props.currentCharacter, 'Mysterious Key');
+			setHasKey(true);
+		} 
+	};
 
     return(
         <div className='recroom room'>
@@ -52,6 +65,7 @@ export const RecRoom = (prop) => {
 					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
 					<button onClick={() => nextGrandHall()}>Grandhall</button>
 					<button onClick={() => nextBallroom()}>Ballroom</button>
+					<button onClick={() => pickUpKey()}>Pick Up Key</button>
 				</div>
 			</div>
 		</div>

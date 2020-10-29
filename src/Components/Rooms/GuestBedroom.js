@@ -13,17 +13,16 @@ export const GuestBedroom = (prop) => {
 	}
 	
 	const [hasKey, setHasKey] = useState(false);
-	if(props.currenCharacter.inventory.includes('Greenhouse Key')){
-        setHasKey(true)
-    }
+	
 	const pickUpKey = () => {
-		if (!hasKey) {
+		if(props.currentCharacter.inventory.includes('Greenhouse Key')){
+			setHasKey(true)
+			return
+		} else if (!hasKey) {
 			
 			props.handleUpdateCharacter(props.currentCharacter, 'Greenhouse Key');
 			setHasKey(true);
-		} else {
-			alert('You already have this key')
-		}
+		} 
 	};
 
 	
