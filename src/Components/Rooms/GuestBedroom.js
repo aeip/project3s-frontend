@@ -62,13 +62,14 @@ export const GuestBedroom = (prop) => {
 							) : (
 								<p>Would you like to pick up a key?</p>
 							)}
+                            <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
 					<br />
 				
 					<div className='nav-buttons'>
+                        {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextGrandhall()}>Grandhall</button>
-						<button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
 				</div>
 			</div>

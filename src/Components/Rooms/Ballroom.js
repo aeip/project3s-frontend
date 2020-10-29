@@ -62,15 +62,16 @@ export const BallRoom = (prop) => {
 				<div className='text-box'>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
-
+                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
 					<br />
 					<div className='nav-buttons'>
+                        {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextGreenhouse()}>Greenhouse Gardens</button>
                         <button onClick={() => nextRecRoom()}>Rec Room</button>
                         <button onClick={() => nextGrandHall()}>Grand Hall</button>
-                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
+                        
 					</div>
 				</div>
 			</div>

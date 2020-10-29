@@ -67,6 +67,7 @@ export const Grandhall = (prop) => {
 				</div>
 				<br />
 				<div className='nav-buttons'>
+					{/* buttons for navigating the mansion go here */}
 					<DropdownButton id="dropdown-basic-button" title="Where to?">
 						<Dropdown.Item ><button onClick={() => nextCourtyard()}>Courtyard</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextGuestBedroom()}>Guest Bedroom</button></Dropdown.Item> 

@@ -48,6 +48,7 @@ export const Courtyard = (prop) => {
 					</div>
 					<br />
 					<div className='nav-buttons'>
+                        {/* buttons for navigating the mansion go here */}
                         <button onClick={() => nextGrandhall()}>Grandhall</button>
                         <button onClick={() => nextRoom()}>Next Room</button>
                     </div>

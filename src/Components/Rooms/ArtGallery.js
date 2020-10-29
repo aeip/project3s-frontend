@@ -46,6 +46,7 @@ export const ArtGallery = (prop) => {
 					</div>
 					<br />
 					<div className='nav-buttons'>
+                        {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
     					<button onClick={() => nextGrandHall()}>Grand Hall</button>
 					</div>

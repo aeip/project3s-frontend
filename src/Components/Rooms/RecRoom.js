@@ -59,13 +59,16 @@ export const RecRoom = (prop) => {
 				<div className='text-box'>
 					<div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
-
+                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
 					<br />
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-					<button onClick={() => nextGrandHall()}>Grandhall</button>
-					<button onClick={() => nextBallroom()}>Ballroom</button>
-					<button onClick={() => pickUpKey()}>Pick Up Key</button>
+                    
+					<div className='nav-buttons'>
+                        {/* buttons for navigating the mansion go here */}
+					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
+					    <button onClick={() => nextGrandHall()}>Grandhall</button>
+    					<button onClick={() => nextBallroom()}>Ballroom</button>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -49,9 +49,13 @@ export const MasterBedroom = (prop) => {
 
 					</div>
 					<br />
-					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-					<button onClick={() => nextStudy()}>Study</button>
-                    <button onClick={() => nextGrandHall()}>Grandhall</button>
+                    
+					<div className='nav-buttons'>
+                        {/* buttons for navigating the mansion go here */}
+					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
+					    <button onClick={() => nextStudy()}>Study</button>
+                        <button onClick={() => nextGrandHall()}>Grandhall</button>
+					</div>
 				</div>
 			</div>
 		</div>
