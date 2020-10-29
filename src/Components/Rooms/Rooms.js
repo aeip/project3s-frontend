@@ -5,7 +5,7 @@ import {Grandhall} from './Grandhall';
 import {Courtyard} from './Courtyard';
 import {GuestBedroom} from './GuestBedroom';
 import DiningHall from './DiningHall';
-import {BallRoom} from './BallRoom';
+import {BallRoom} from './Ballroom';
 import {RecRoom} from './RecRoom';
 import {Study} from './Study';
 import {Greenhouse} from './Greenhouse';
