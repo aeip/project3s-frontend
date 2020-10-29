@@ -60,7 +60,7 @@ export const Grandhall = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-				<p>You are in a lar</p>
+				<p>The Grand Hall stretches the entire length of the Dunwich Manor. <br/> There are floorboards missing and a blanket of dust on the surfaces to reflect the manor's neglect over the years.</p>
 
 				<div className='nav-buttons'>
 					<DropdownButton id="dropdown-basic-button" title="Where to?">

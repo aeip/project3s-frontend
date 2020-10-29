@@ -8,7 +8,7 @@ export const GuestBedroom = (prop) => {
 	let props = prop.props;
 	props.handleUpdateCharacterRoom(props.currentCharacter, 'Guest Bedroom');
 
-	const nextGrandhall = () => {
+	const nextGrandHall = () => {
         props.history.push('/game/grandhall/')
 	}
 	
