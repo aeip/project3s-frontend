@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Inventory} from '../Inventory/Inventory';
+import '../Styles/Rooms/Kitchen.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 

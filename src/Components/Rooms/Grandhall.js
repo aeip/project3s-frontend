@@ -49,7 +49,6 @@ export const Grandhall = (prop) => {
 			alert("The door is locked")
 			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
-		
 	};
 
 	if(props.currentCharacter.username === ''){
@@ -100,14 +99,13 @@ export const Grandhall = (prop) => {
 				<div className='nav-buttons'>
 					{/* buttons for navigating the mansion go here */}
 					<DropdownButton id="dropdown-basic-button" title="Where to?">
-						<Dropdown.Item ><button onClick={() => nextCourtyard()}>Courtyard</button></Dropdown.Item>
-						<Dropdown.Item ><button onClick={() => nextGuestBedroom()}>Guest Bedroom</button></Dropdown.Item> 
-						<Dropdown.Item ><button onClick={() => nextMasterBedroom()}>Master Bedroom</button></Dropdown.Item>
-						<Dropdown.Item ><button onClick={() => nextBallroom()}>Ballroom</button></Dropdown.Item> 
+						<Dropdown.Item ><button onClick={() => nextBallroom()}>Ballroom</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextGuestBedroom()}>Guest Bedroom</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextMasterBedroom()}>Master Bedroom</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextCourtyard()}>Courtyard</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextArtGallery()}>Art Gallery</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
-						<Dropdown.Item ><button onClick={() => nextArtGallery()}>Art Gallery</button></Dropdown.Item>
 					</DropdownButton>
 					<button onClick={() => nextFoyer()}>Back to Foyer</button>
 					</div>

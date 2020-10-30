@@ -28,7 +28,7 @@ export const GuestBedroom = (prop) => {
 
 	
     return(
-        <div className='greenhouse room'>
+        <div className='guestbedroom room'>
 			
 
 			<div className='game-screen'>
