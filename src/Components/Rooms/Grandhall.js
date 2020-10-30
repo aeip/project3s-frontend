@@ -52,6 +52,10 @@ export const Grandhall = (prop) => {
 		
 	};
 
+	if(props.currentCharacter.username === ''){
+		props.history.push('/')
+	}
+
 	return (
 		<div className='grandhall room'>
 			
