@@ -21,6 +21,7 @@ export const Grandhall = (prop) => {
 			props.history.push('/game/dininghall/');
 		} else {
 			alert("The door is locked")
+			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
 	};
 	const nextBallroom = () => {
@@ -31,6 +32,7 @@ export const Grandhall = (prop) => {
 			props.history.push('/game/recroom/');
 		} else {
 			alert("The door is locked")
+			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
 	};
 	const nextMasterBedroom = () => {
@@ -42,8 +44,10 @@ export const Grandhall = (prop) => {
 	const nextGuestBedroom = () => {
 		if(props.currentCharacter.inventory.includes('Guest Bedroom Key')){
 			props.history.push('/game/guestbedroom/');
+			
 		} else {
 			alert("The door is locked")
+			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
 		
 	};

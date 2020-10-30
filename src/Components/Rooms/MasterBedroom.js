@@ -14,6 +14,7 @@ export const MasterBedroom = (prop) => {
 			props.history.push('/game/study/');
 		} else {
 			alert("The door is locked")
+			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
 	};
     const nextGrandHall = () => {

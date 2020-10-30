@@ -12,6 +12,7 @@ export const BallRoom = (prop) => {
         if(props.currentCharacter.inventory.includes('Greenhouse Key')){
 			props.history.push('/game/greenhouse/');
 		} else {
+            props.handleUpdateMadness(props.currentCharacter, 1)
 			alert("The door is locked")
 		}
     }
@@ -19,7 +20,8 @@ export const BallRoom = (prop) => {
         if(props.currentCharacter.inventory.includes('Rec Room Key')){
 			props.history.push('/game/recroom/');
 		} else {
-			alert("The door is locked")
+            alert("The door is locked")
+            props.handleUpdateMadness(props.currentCharacter, 1)
 		}
     }
     const nextGrandHall = () => {

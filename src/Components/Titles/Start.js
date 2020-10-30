@@ -49,6 +49,13 @@ export const Start = (prop) => {
 		props.history.push('/about')
 	}
 
+	window.onload = function() {
+		if(!window.location.hash) {
+			window.location = window.location + '#loaded';
+			window.location.reload();
+		}
+	}
+
 	return (
 		<div className='start'>
 			<h1>Dunwich Manor</h1>

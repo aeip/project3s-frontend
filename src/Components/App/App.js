@@ -20,6 +20,7 @@ function App() {
 	const [scoreboards, setScoreboards] = useState([]);
 	const [death, setDeath] = useState('')
 	
+
 	//handle death reason
 	const deathReason = (num) => {
 		console.log('num', num)
@@ -93,20 +94,25 @@ function App() {
 		})
 	}
 	const handleUpdateHP = (character, HP) => {
+		let newAmount = currentCharacter.HP - HP
 		fetch(url + '/character/' + character.username + '/HP/' + HP, {
 			method: 'put',
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		})
+		.then((response) => handleSignIn(character))
 	}
 	const handleUpdateMadness = (character, madness) => {
-		fetch(url + '/character/' + character.username + '/madness/' + madness, {
+		let newAmount = character.MadnessLevel + madness
+		console.log('madness', madness, newAmount, character)
+		fetch(url + '/character/' + character.username + '/madness/' + newAmount, {
 			method: 'put',
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		})
+		.then((response) => handleSignIn(character))
 	}
 	
 	const handleUpdateCharacterScore = (character, score) => {

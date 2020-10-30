@@ -22,6 +22,7 @@ export const Courtyard = (prop) => {
 			setTimeout(dead, 2000)
 		}else{
 			alert("The door is locked")
+			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
 	}
 	const dead = () => {
