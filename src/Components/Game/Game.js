@@ -15,7 +15,11 @@ export const Game = (props) => {
         props.history.push('/lose')
     }
 
-    
+    if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+        console.log( "This page is reloaded" );
+      } else {
+        console.log( "This page is not reloaded");
+      }
 
 	return (
     <div className='game'>

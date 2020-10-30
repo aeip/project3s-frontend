@@ -13,6 +13,8 @@ export const Greenhouse = (prop) => {
     }
 
     const [hasKey, setHasKey] = useState(false);
+
+    
 	
 	const pickUpKey = () => {
 		if(props.currentCharacter.inventory.includes('Dining Hall Key')){

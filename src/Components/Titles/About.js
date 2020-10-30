@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Styles/Titles/About.scss'
 
 export const About = (props) => {
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../Styles/Titles/Start.scss'
 
 export const Start = (prop) => {
 	let props = prop.props;
