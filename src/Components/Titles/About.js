@@ -20,8 +20,7 @@ export const About = (props) => {
 
             <h5>Woodrow Thompson</h5>
             <img src='https://media-exp1.licdn.com/dms/image/C4E03AQGJYRGcfxyTFg/profile-displayphoto-shrink_200_200/0?e=1609372800&v=beta&t=VmiuA1JIERsaTKCkJNewVWWmEfVmogiyDkGAzp0krsQ' />
-            <p>about you and contributions</p>
-
+            <p>Web Designer with multiple years of experience in both digital and traditional arts. Years of experience with Adobe Creative Suite and Graphic Design. Responsible for scripts, providing visual assets, and structuring user interface and layout for gaming elements.</p>
             <h5>Zane Griffin</h5>
             <img src='https://media-exp1.licdn.com/dms/image/C4E03AQFmYaZs6x0PLw/profile-displayphoto-shrink_200_200/0?e=1609372800&v=beta&t=NysmMPJgymAiI6cqlsf7wFkTlYS0bctarbnN9uKuXZs' />
             <p>about you and contributions</p>
