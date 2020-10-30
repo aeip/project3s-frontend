@@ -2,7 +2,7 @@ import React from 'react';
 import {Character} from '../Character/Character';
 import {Interactions} from '../Interactions/Interactions';
 import {Rooms} from '../Rooms/Rooms';
-
+import './Game.scss'
 export const Game = (props) => {
 
     if(props.currentCharacter.HP === 0){
@@ -23,6 +23,7 @@ export const Game = (props) => {
     <div className='game'>
         <Character />
         <Interactions />
+        <h1>Dunwich Manor</h1>
         <Rooms props={props} />
     </div>
     )

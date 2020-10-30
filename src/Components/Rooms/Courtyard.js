@@ -30,13 +30,17 @@ export const Courtyard = (prop) => {
 	}
     return (
 		<div className='courtyard room'>
-			<h1>Courtyard</h1>
+			
 
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}
 				<div className='background'>
-                    {/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
-					<Inventory props={props} />
+                    
+                    <div className='header'>
+                        {/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
+    					<Inventory props={props} />
+                        <h1>Courtyard</h1>
+                    </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
 						{isDead ? <img src='https://images.unsplash.com/photo-1572453020814-972b244074d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'></img> : <img src='https://i.imgur.com/pNOztsH.png' />}

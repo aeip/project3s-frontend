@@ -25,13 +25,17 @@ export const Kitchen = (prop) => {
 
     return(
         <div className='kitchen room'>
-			<h1>Kitchen</h1>
+			
 
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}
 				<div className='background'>
-                    {/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
-					<Inventory props={props} />
+                    
+                    <div className='header'>
+                        {/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
+    					<Inventory props={props} />
+                        <h1>Kitchen</h1>
+                    </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
 						<img src='https://i.imgur.com/pNOztsH.png' />
