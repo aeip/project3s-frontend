@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Styles/Titles/Score.scss'
 
 export const Scoreboard = (props) => {
 
@@ -9,7 +10,7 @@ console.log('scoreboard',props.scoreboard)
 		{props.scoreboard[0].players ? props.scoreboard[0].players.map((player) => {
 			return(
 				<>
-					<h5>{player.username}</h5>
+					<h3>{player.username}</h3>
 					<h5>{player.score}</h5>
 				</>
 			)
