@@ -10,7 +10,9 @@ export const About = (props) => {
             <h1>About Dunwich Manor</h1>
 
             <h3>Summary</h3>
-            <p>stuff about the project</p>
+            <p>Join us for an old school adventure through a haunted mansion! Find your way through and see what secrets are hidden here.... Will you survive or will it drive you mad?</p>
+            <br/>
+            <p>This game is a group project built by General Assembly students to demonstrate technical skills in React and MongoDB. It also served to show effective teamwork!</p>
 
             <h3>Meet the Team</h3>
 
@@ -23,7 +25,7 @@ export const About = (props) => {
             <p>Web Designer with multiple years of experience in both digital and traditional arts. Years of experience with Adobe Creative Suite and Graphic Design. Responsible for scripts, providing visual assets, and structuring user interface and layout for gaming elements.</p>
             <h5>Zane Griffin</h5>
             <img src='https://media-exp1.licdn.com/dms/image/C4E03AQFmYaZs6x0PLw/profile-displayphoto-shrink_200_200/0?e=1609372800&v=beta&t=NysmMPJgymAiI6cqlsf7wFkTlYS0bctarbnN9uKuXZs' />
-            <p>about you and contributions</p>
+            <p>An aspiring software engineer dedicated to full responsive design. Prior experience is in art and design with Adobe Creative Suite. She was responsible for the backend server and assisting with frontend logic. </p>
             <button onClick={() => handleClick()}>Back</button>
         </div>
     )

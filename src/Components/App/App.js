@@ -109,6 +109,7 @@ function App() {
 		})
 	}
 	const handleUpdateHP = (character, HP, boolean) => {
+		console.log('health')
 		let newAmount
 		if(boolean){
 			newAmount = 100

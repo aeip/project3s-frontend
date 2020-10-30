@@ -9,6 +9,7 @@ Code
 Deployed
 
 - [https://project3s-backend.herokuapp.com/](https://project3s-backend.herokuapp.com/)
+- [https://project3s-frontend.netlify.app/](https://project3s-frontend.netlify.app/)
 
 ## Project Description
 
