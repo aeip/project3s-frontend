@@ -74,7 +74,7 @@ export const Start = (prop) => {
 					placeholder='Enter password'
 				/>
 				<br />
-				<button>Start</button>
+				<button onClick={handleSubmit}>Start</button>
 			</form>
 			<button onClick={() => toScore()}>Highscores</button>
 			<button onClick={() => toAbout()}>About</button>
