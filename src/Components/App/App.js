@@ -32,6 +32,8 @@ function App() {
 			setDeath("Something did not want you there. You need to defend yourself...")
 		}
 		handleUpdateMadness(currentCharacter, -currentCharacter.MadnessLevel)
+		handleUpdateHP(currentCharacter, 0, true)
+		handleResetInventory(currentCharacter)
 	}
 
 	//empty character
@@ -86,6 +88,18 @@ function App() {
 	 })
 	 .then((response) => handleSignIn(character))
 	};
+
+	const handleResetInventory = (currentCharacter) => {
+		console.log('reset!')
+		fetch(url + '/character/' + currentCharacter.username + '/reset/died', {
+			method: 'put',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+		.then((response) => handleSignIn(currentCharacter))
+	}
+
 	const handleUpdateCharacterRoom = (character, room) => {
 		fetch(url + '/character/' + character.username + '/room/' + room, {
 			method: 'put',
@@ -94,9 +108,14 @@ function App() {
 			}
 		})
 	}
-	const handleUpdateHP = (character, HP) => {
-		let newAmount = currentCharacter.HP - HP
-		fetch(url + '/character/' + character.username + '/HP/' + HP, {
+	const handleUpdateHP = (character, HP, boolean) => {
+		let newAmount
+		if(boolean){
+			newAmount = 100
+		}else{
+			newAmount = currentCharacter.HP - HP
+		}
+		fetch(url + '/character/' + character.username + '/HP/' + newAmount, {
 			method: 'put',
 			headers: {
 				'Content-Type': 'application/json'

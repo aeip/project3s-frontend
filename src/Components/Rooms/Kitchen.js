@@ -17,7 +17,8 @@ export const Kitchen = (prop) => {
             setHasKnife(true)
             return
         }else if (!hasKnife) {
-			props.handleUpdateCharacter(props.currentCharacter, 'Knife');
+            props.handleUpdateCharacter(props.currentCharacter, 'Knife');
+            props.handleUpdateHP(props.currentCharacter, 34)
 			setHasKnife(true);
 		}
 	};
@@ -56,7 +57,10 @@ export const Kitchen = (prop) => {
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {hasKnife ? (
+                            <>
 								<p>You picked up a knife</p>
+                                <p>A rat has bitten you</p>
+                            </>
 							) : (
 								<p>Would you like to pick up a knife?</p>
 							)}

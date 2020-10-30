@@ -41,9 +41,7 @@ export const Grandhall = (prop) => {
 	const nextMasterBedroom = () => {
 		props.history.push('/game/masterbedroom/');
 	};
-	const nextArtGallery = () => {
-		props.history.push('/game/artgallery');
-	};
+	
 	const nextGuestBedroom = () => {
 		if(props.currentCharacter.inventory.includes('Guest Bedroom Key')){
 			props.history.push('/game/guestbedroom/');
