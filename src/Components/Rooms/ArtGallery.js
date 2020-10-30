@@ -59,7 +59,7 @@ export const ArtGallery = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-                    <p>Throughout the gallery is many bizzare statues and eerie paintings. The owner of this estate certainly had a macabre taste.</p>
+                    <p>Throughout the gallery is many bizzare statues and eerie paintings. The owner of this estate certainly has a macabre taste.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {inspected ? (

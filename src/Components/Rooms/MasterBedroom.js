@@ -56,12 +56,12 @@ export const MasterBedroom = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-                    <p>introduction text</p>
+                    <p>The dusty and unkept state of the bed makes this Master Bedroom very uncomfortable to say the least. Especially in the moonlight.</p>
 					<div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
 
 					</div>
-                    <p>transition text</p>
+                    <p>There's a door leading to what looks like a Study.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}

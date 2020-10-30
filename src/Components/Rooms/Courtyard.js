@@ -41,7 +41,7 @@ export const Courtyard = (prop) => {
                     </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						{isDead ? <img src='https://images.unsplash.com/photo-1572453020814-972b244074d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'></img> : <img src='https://i.imgur.com/pNOztsH.png' />}
+						{isDead ? <img src='https://i.imgur.com/ydtr3nn.jpg'></img> : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -59,7 +59,7 @@ export const Courtyard = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-                    Moonlight pours a pale blue glow as you enter the courtyard. Despite it's disheveled and overgrown nature, the landscape of the estate is really quite beautiful.
+                    <p>Moonlight pours a pale blue glow as you enter the courtyard. Despite it's disheveled and overgrown nature, the landscape of the estate is really quite beautiful.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
 
