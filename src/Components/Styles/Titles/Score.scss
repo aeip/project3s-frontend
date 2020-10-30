@@ -8,24 +8,61 @@ body{
 }
 
 .scoreboard{
-  
 
+    button{
+        font-size: 24px;
+        font-family: 'Roboto Condensed', sans-serif;
+        border: 2px solid  #AD7D00;
+        color:  #AD7D00;
+        background-color: #480707;
+    }
     h1{
         font-family: 'UnifrakturCook', cursive;
         font-size: 56px;
         color: #AD7D00;
     }
 
+    .titles{
+        display: flex;
+        max-width: 600px;
+        margin: 0 auto;
+        justify-content: space-around;
+        h3{
+            font-family: 'Parisienne', cursive;
+            font-size: 44px;
+            color: #AD7D00;
+            margin: 0 0 15px 0;
+        }
+    
+        h5{
+            font-family: 'Roboto Condensed', sans-serif;
+            color:  #480707;
+            font-size: 44px;
+            margin: 0;
+        }
+    }
+
+    .scores{
+        display: flex;
+        max-width: 600px;
+        margin: 10px auto;
+        justify-content: space-around;
+        background-color: peachpuff;
+        border-radius: 10px;
+        
+
     h3{
-        font-family: 'Parisienne', cursive;
+        font-family: 'UnifrakturCook', cursive;
         font-size: 44px;
         color: #AD7D00;
+    
     }
 
     h5{
         font-family: 'Roboto Condensed', sans-serif;
         color:  #480707;
         font-size: 44px;
+    }
     }
 
     
