@@ -23,6 +23,9 @@ export const Grandhall = (prop) => {
 			alert("The door is locked")
 		}
 	};
+	const nextArtGallery = () => {
+		props.history.push('/game/artgallery/');
+	};
 	const nextBallroom = () => {
 		props.history.push('/game/ballroom/');
 	};
@@ -82,6 +85,7 @@ export const Grandhall = (prop) => {
 
 				</div>
 				<br />
+				<p>This is the main access to nearly every room in the manor.</p>
 				<div className='nav-buttons'>
 					{/* buttons for navigating the mansion go here */}
 					<DropdownButton id="dropdown-basic-button" title="Where to?">
@@ -90,6 +94,7 @@ export const Grandhall = (prop) => {
 						<Dropdown.Item ><button onClick={() => nextMasterBedroom()}>Master Bedroom</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextBallroom()}>Ballroom</button></Dropdown.Item> 
 						<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextArtGallery()}>Art Gallery</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
 					</DropdownButton>
 					<button onClick={() => nextFoyer()}>Back to Foyer</button>

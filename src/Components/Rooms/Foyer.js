@@ -52,7 +52,7 @@ export const Foyer = (prop) => {
 
 					</div>
 					<br />
-					<p>No sense in turning back, the only other way is into the Great Hall.</p>		
+					<p>No sense in turning back, the only other way is into the Grand Hall.</p>		
 					<div className='nav-buttons'>
 						{/* buttons for navigating the mansion go here */}
 						<button onClick={() => nextRoom()}>Grand Hall</button>

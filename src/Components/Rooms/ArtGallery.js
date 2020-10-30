@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Inventory} from '../Inventory/Inventory';
 import '../Styles/Rooms/Study.scss'
 import '../Styles/UserInterface/GameScreen.scss';
@@ -6,7 +6,7 @@ import '../Styles/UserInterface/CharacterPanel.scss'
 
 export const ArtGallery = (prop) => {
 	let props = prop.props;
-    props.handleUpdateCharacterRoom(props.currentCharacter, 'Dining Hall');
+    props.handleUpdateCharacterRoom(props.currentCharacter, 'Art Gallery');
 
 	const nextGrandHall = () => {
         props.history.push('/game/grandhall/')
