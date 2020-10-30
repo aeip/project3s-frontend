@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+import '../Styles/Titles/Win.scss'
 export const Win = (props) => {
     const url = 'https://project3s-backend.herokuapp.com'
     const handleClick = () => {
@@ -31,6 +31,9 @@ export const Win = (props) => {
     return (
         <div className='win'>
             <h1>You Win!</h1>
+            <img src='https://i.imgur.com/ydtr3nn.jpg'></img>
+            <h3>You entered the crypt and found a horid monster.</h3>
+            <h3>With your knife you ended it's life and made the mansion safe again</h3>
             <button onClick={() => handleClick()}>Play Again</button>
             <button onClick={() => toScore()}>HighScores</button>
         </div>
