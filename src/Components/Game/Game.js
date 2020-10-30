@@ -15,9 +15,7 @@ export const Game = (props) => {
         props.history.push('/lose')
     }
 
-    if(!props.currentCharacter.username){
-		props.history.push('/')
-	}
+    
 
 	return (
     <div className='game'>
