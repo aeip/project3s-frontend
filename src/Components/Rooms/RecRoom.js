@@ -45,7 +45,7 @@ export const RecRoom = (prop) => {
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
 						{hasKey ? 
-                            [<img src='https://i.imgur.com/NVvZndA.png' />,<p>You picked up a key!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />} 
+                            [<img src='https://i.imgur.com/NVvZndA.png' />,<p>You picked up a mysterious looking key...</p>] : <img src='https://i.imgur.com/pNOztsH.png' />} 
 					</div>
 				</div>
 				<div className='character-panel'>
