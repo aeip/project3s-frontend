@@ -35,12 +35,20 @@
         }
         .graphic {
             display: flex;
-            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
             height: 300px;
             width: 100%;
+            p { 
+                color: white;
+                font-weight: bold;
+            }
             img {
-                margin: auto;
-                height: 60%;
+                max-width: 50%;
+                max-height: 70%;
+                
             }  
         }
     }
@@ -52,9 +60,7 @@
         color: white;
         margin: auto;
         padding: 5px;
-        // display: flex;
         justify-content: space-evenly;
-        // width: 100%;
         a {
             display: flex;
         }
@@ -83,9 +89,14 @@
     .game-screen{
         .background {
             .graphic {
-                height: 600px;
+                height: 500px;
+                p {
+                    
+                }
                 img {
-                    height: 50%;
+                    border-style: solid;
+                    max-height: 70%;
+                    max-width: 40%;
                 }
             }
             h1 {

@@ -12,7 +12,7 @@ export const ArtGallery = (prop) => {
 	
 
 	const inspectPainting = () => {
-		props.handleUpdateMadness(props.currentCharacter, 2)
+		props.handleUpdateMadness(props.currentCharacter, 0)
 		setInspected(true)
 		setTimeout(changeImageBack, 3500)
 	}
@@ -39,7 +39,9 @@ export const ArtGallery = (prop) => {
                     </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						{inspected ? <img src='https://i.imgur.com/6xvgNGR.jpg' /> : <img src='https://i.imgur.com/pNOztsH.png' />}
+                        
+						{inspected ? 
+                            [<img src='https://i.imgur.com/6xvgNGR.jpg' />,<p>OH DEAR GOD! What a gruesome image!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -61,7 +63,7 @@ export const ArtGallery = (prop) => {
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {inspected ? (
-								<p>OH DEAR GOD! What a gruesome image!</p>
+                            null
 							) : (
 								<p>One painting in particular catches your eye...</p>
 							)}
