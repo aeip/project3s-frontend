@@ -7,6 +7,9 @@
             border-style: none;
             border-bottom-right-radius: 10px;
             background-color: goldenrod;
+            &:hover {
+                background-color: white;
+            }
         }
         .dropdown-menu {
             a {

@@ -89,13 +89,13 @@ export const BallRoom = (prop) => {
                             ]
                         }
 					</div>
-                    <p>A set of glass double doors leads to the gardens and another leading to the Recreational Room. There's a final door leading back to the Grand Hall</p>
+                    <p>A set of glass double doors leads to the Greenhouse and another leading to the Rec Room. There's a final door leading back to The Grand Hall</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextGreenhouse()}>Greenhouse Gardens</button>
                         <button onClick={() => nextRecRoom()}>Rec Room</button>
-                        <button onClick={() => nextGrandHall()}>Enter the Grand Hall</button>
+                        <button onClick={() => nextGrandHall()}>Enter The Grand Hall</button>
 					</div>
 				</div>
 			</div>

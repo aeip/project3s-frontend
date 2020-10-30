@@ -57,7 +57,7 @@ export const Foyer = (prop) => {
 					<p>No sense in turning back, the only other way is into the Grand Hall.</p>		
 					<div className='nav-buttons'>
 						{/* buttons for navigating the mansion go here */}
-						<button onClick={() => nextRoom()}>Grand Hall</button>
+						<button onClick={() => nextRoom()}>Enter The Grand Hall</button>
 					</div>
 				</div>
 			</div>

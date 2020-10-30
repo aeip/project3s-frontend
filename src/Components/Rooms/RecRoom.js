@@ -45,7 +45,10 @@ export const RecRoom = (prop) => {
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
 						{hasKey ? 
-                            [<img src='https://i.imgur.com/NVvZndA.png' />,<p>You picked up a mysterious looking key...</p>] : <img src='https://i.imgur.com/pNOztsH.png' />} 
+                            [<img src='https://i.imgur.com/NVvZndA.png' />,
+                            <p>A secret compartment pops open containing a strange key.</p>,
+                            <p>You picked up a mysterious looking key...</p>
+                            ] : <img src='https://i.imgur.com/pNOztsH.png' />} 
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -65,22 +68,22 @@ export const RecRoom = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-                    <p>intro room text</p>
+                    <p>This place has all of the creature comforts. Music, brandy, billiards, and a shelf of good reading material. All you could ask for. </p>
 					<div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {hasKey ? (
 							    null
 							) : [
-                                <p>Would you like to pick up a key?</p>,
-                                <button onClick={() => pickUpKey()}>Pick Up Key</button>
+                                <p>Hold on... There appears to be a switch under this book shelf.</p>,
+                                <button onClick={() => pickUpKey()}>Press the switch</button>
                             ]
                         }
 					</div>
-                    <p>transition text</p>
+                    <p>Aside from the door leading back to The Grand Hall, there is another that leads to the Ballroom</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
-					    <button onClick={() => nextGrandHall()}>Grandhall</button>
+					    <button onClick={() => nextGrandHall()}>Enter The Grand Hall</button>
     					<button onClick={() => nextBallroom()}>Ballroom</button>
 					</div>
 				</div>

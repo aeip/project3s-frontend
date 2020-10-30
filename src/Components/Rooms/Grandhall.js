@@ -66,7 +66,7 @@ export const Grandhall = (prop) => {
 					<div className='header'>
 						{/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
 						<Inventory props={props} />
-						<h1>Grand Hall</h1>
+						<h1>The Grand Hall</h1>
 					</div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}

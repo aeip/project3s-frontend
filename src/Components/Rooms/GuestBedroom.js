@@ -78,7 +78,7 @@ export const GuestBedroom = (prop) => {
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
-                        <button onClick={() => nextGrandhall()}>Grandhall</button>
+                        <button onClick={() => nextGrandhall()}>Enter The Grand Hall</button>
 					</div>
 				</div>
 			</div>
