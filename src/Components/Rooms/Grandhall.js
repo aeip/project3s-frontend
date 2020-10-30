@@ -92,7 +92,6 @@ export const Grandhall = (prop) => {
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
 
 				</div>
-				<br />
 				<p>This is the main access to nearly every room in the manor.</p>
 				<div className='nav-buttons'>
 					{/* buttons for navigating the mansion go here */}

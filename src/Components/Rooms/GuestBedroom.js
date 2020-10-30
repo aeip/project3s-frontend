@@ -71,7 +71,6 @@ export const GuestBedroom = (prop) => {
 							)}
                             <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
-					<br />
 				
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}

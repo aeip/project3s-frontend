@@ -49,21 +49,19 @@ export const ArtGallery = (prop) => {
 							{/* This is where we insert the code that calls the current number for health */}
 							<div className='health-number'>{props.currentCharacter.HP}</div>
 						</div>
-						
 						<div className='madness-icon'>
 							{/* This is where we put the code to output the current madness number */}
 							<div className='madness-number'>{props.currentCharacter.MadnessLevel}</div>
 						</div>
-						
 					</div>
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
+                    <p>Throughout the gallery is many bizzare statues and eerie paintings. The owner of this estate certainly had a macabre taste.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
 						<button onClick={inspectPainting}>Inspect Paintings</button>
 					</div>
-					<br />
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}

@@ -64,7 +64,6 @@ export const Greenhouse = (prop) => {
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
-					<br />
                     <div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
                         {/* <button onClick={() => nextRoom()}>Next Room</button> */}

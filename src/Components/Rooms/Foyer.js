@@ -54,7 +54,6 @@ export const Foyer = (prop) => {
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
 
 					</div>
-					<br />
 					<p>No sense in turning back, the only other way is into the Grand Hall.</p>		
 					<div className='nav-buttons'>
 						{/* buttons for navigating the mansion go here */}

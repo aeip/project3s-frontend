@@ -77,11 +77,13 @@ export const BallRoom = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
+                    <p>A large empty room. This was once a place of gathering and merriment, but it appears those times have long passed.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
+                        <p>You see a lone key sitting at a side desk besides a lounge chair.</p>
                         <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
-					<br />
+                    <p>A set of glass double doors leads to the gardens and another leading to the Recreational Room. There's a final door leading back to the Grand Hall</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
