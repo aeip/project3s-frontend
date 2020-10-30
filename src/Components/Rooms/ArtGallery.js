@@ -39,7 +39,7 @@ export const ArtGallery = (prop) => {
                     </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						{inspected ? <img src='https://images.unsplash.com/photo-1553465528-5a213ccc0c7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80' /> : <img src='https://i.imgur.com/pNOztsH.png' />}
+						{inspected ? <img src='https://i.imgur.com/6xvgNGR.jpg' /> : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>

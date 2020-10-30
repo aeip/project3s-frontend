@@ -3,8 +3,6 @@
         .character-panel {
             
             background-color: slategray;
-            // border-style: solid;
-            border-width: 1px;
             height: 50px;
             display: flex;
             align-content: flex-start;
@@ -23,43 +21,42 @@
                 width: 45px;
             }
             .health {
-                    border-style: solid;
-                    border-width: 1px;
+                    border-style: inset;
+                    border-width: 3px;
+                    border-color: darkslategray;
+                    margin: 1px;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     width: fit-content;
-                    // margin: 2px;
                 .health-icon {
-                    border-style: solid;
-                    border-width: 1px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-image: url('https://i.imgur.com/ulx726R.png');
+                    background-image: url('https://i.imgur.com/h3XRk8Y.png');
                     background-repeat: no-repeat;
                     background-size: contain;
-                    height: 40px;
+                    background-position: center;
                     width: 40px;
-                    
+                    height: 40px;
                 }
                 .health-number {
                     font-weight: bold;
                 }
                 .madness-icon {
-                    border-style: solid;
-                    border-width: 1px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-image: url('https://i.imgur.com/bzH7jSm.png');
+                    background-image: url('https://i.imgur.com/VzAhSzY.png');
                     background-repeat: no-repeat;
                     background-size: contain;
+                    background-position: center;
                     height: 40px;
                     width: 40px;
                 }
                 .madness-number {
                     font-weight: bold;
+                    margin-bottom: 5px;
                 }
             }
         }
@@ -77,19 +74,21 @@
                     
                 }
                 .health {
+                    margin: 5px;
                     .health-icon {
-                        width: 100px;
-                        height: 100%;
+                        width:85px;
+                        height: 90%;
                     }
                     .health-number {
                         font-size: 25px;
                     }
                     .madness-icon {
                         width: 100px;
-                        height: 100%;
+                        height: 95%;
                     }
                     .madness-number {
                         font-size: 25px;
+                        margin-bottom: 10px;
                     }
                 }
             }

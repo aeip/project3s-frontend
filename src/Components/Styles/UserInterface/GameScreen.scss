@@ -36,7 +36,6 @@
         .graphic {
             display: flex;
             margin: auto;
-            color: green;
             height: 300px;
             width: 100%;
             img {
@@ -63,14 +62,15 @@
             font-size: 14px;
         }
         .nav-buttons  {
-                border-style: solid;
-                border-color: white;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                align-content: center;
-                height: fit-content;
-                padding: 10px;
+            border-style: ridge;
+            border-color:goldenrod;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+            height: fit-content;
+            padding: 10px;
         }
     }
 }
