@@ -67,13 +67,13 @@ export const ArtGallery = (prop) => {
 							) : (
 								<p>One painting in particular catches your eye...</p>
 							)}
-						<button onClick={inspectPainting}>Inspect Paintings</button>
+						<button onClick={inspectPainting}>Inspect the painting</button>
 					</div>
                     <p>The door leads back to the Grand Hall.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-    					<button onClick={() => nextGrandHall()}>Grand Hall</button>
+    					<button onClick={() => nextGrandHall()}>Enter the Grand Hall</button>
 					</div>
 				</div>
 			</div>

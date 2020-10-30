@@ -30,8 +30,6 @@ export const Courtyard = (prop) => {
 	}
     return (
 		<div className='courtyard room'>
-			
-
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}
 				<div className='background'>
@@ -53,24 +51,24 @@ export const Courtyard = (prop) => {
 							{/* This is where we insert the code that calls the current number for health */}
 							<div className='health-number'>{props.currentCharacter.HP}</div>
 						</div>
-						
 						<div className='madness-icon'>
 							{/* This is where we put the code to output the current madness number */}
 							<div className='madness-number'>{props.currentCharacter.MadnessLevel}</div>
 						</div>
-						
 					</div>
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
+                    Moonlight pours a pale blue glow as you enter the courtyard. Despite it's disheveled and overgrown nature, the landscape of the estate is really quite beautiful.
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
 
 					</div>
+                    <p>The far end of the courtyard has a forboding crypt entrance. It's locked and needs some special sort of key...</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
-                        <button onClick={() => nextGrandhall()}>Grandhall</button>
-                        <button onClick={() => nextRoom()}>Next Room</button>
+                        <button onClick={() => nextGrandhall()}>Enter the Grand Hall</button>
+                        <button onClick={() => nextRoom()}>Open Crypt Door</button>
                     </div>
 				</div>
 			</div>

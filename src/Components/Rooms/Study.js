@@ -62,15 +62,16 @@ export const Study = (prop) => {
 				<div className='text-box'>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
+                        <p>The Study is absolutely packed with literature and artifacts from various parts of the world. This is quite an impressive collection.</p>
                         {hasKey ? (
 							    null
 							) : [
-                                <p>Would you like to pick up the key?</p>,
+                                <p>A key sits on the desk amid a mess of office supplies.</p>,
                                 <button onClick={() => pickUpKey()}>Pick Up Key</button>
                             ]
                         }
 					</div>
-
+                        <p>There is only one door into this room from the bedroom.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}

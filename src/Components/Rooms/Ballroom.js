@@ -81,11 +81,10 @@ export const BallRoom = (prop) => {
                     <p>A large empty room. This was once a place of gathering and merriment, but it appears those times have long passed.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
-                        <p>You see a lone key sitting at a side desk besides a lounge chair.</p>
                         {hasKey ? (
 							    null
 							) : [
-                                <p>Would you like to pick up the key?</p>,
+                                <p>You see a lone key sitting at a side desk besides a lounge chair.</p>,
                                 <button onClick={() => pickUpKey()}>Pick Up Key</button>
                             ]
                         }
@@ -96,8 +95,7 @@ export const BallRoom = (prop) => {
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
                         <button onClick={() => nextGreenhouse()}>Greenhouse Gardens</button>
                         <button onClick={() => nextRecRoom()}>Rec Room</button>
-                        <button onClick={() => nextGrandHall()}>Grand Hall</button>
-                        
+                        <button onClick={() => nextGrandHall()}>Enter the Grand Hall</button>
 					</div>
 				</div>
 			</div>

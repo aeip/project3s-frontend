@@ -60,6 +60,7 @@ export const Kitchen = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
+					<p>intro room text</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {hasKnife ? (
@@ -70,6 +71,7 @@ export const Kitchen = (prop) => {
 							]	
 						}
                     </div>
+					<p>transition room text</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
