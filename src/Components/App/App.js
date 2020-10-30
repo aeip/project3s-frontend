@@ -1,6 +1,7 @@
 //Import Basics
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import axios from 'axios'
 import './App.css';
 //Game Component
 import { Game } from '../Game/Game';
@@ -10,6 +11,7 @@ import { Titles } from '../Titles/Titles';
 import { Scoreboard } from '../Scoreboard/Scoreboard';
 import {Win} from '../Titles/Win'
 import {Death} from '../Titles/Death'
+import {About} from '../Titles/About'
 
 function App() {
 	//vars
@@ -18,6 +20,7 @@ function App() {
 	const [scoreboards, setScoreboards] = useState([]);
 	const [death, setDeath] = useState('')
 	
+
 	//handle death reason
 	const deathReason = (num) => {
 		console.log('num', num)
@@ -28,6 +31,7 @@ function App() {
 		} else if (num === 3){ //bad ending
 			setDeath("Something did not want you there. You need to defend yourself...")
 		}
+		handleUpdateMadness(currentCharacter, -currentCharacter.MadnessLevel)
 	}
 
 	//empty character
@@ -45,11 +49,11 @@ function App() {
 
 	//get methods
 	const getScoreboard = () => {
-		fetch(url + '/score/')
-			.then((response) => response.json())
-			.then((data) => {
-				setScoreboards(data);
-			});
+		axios({
+			url: url + '/score',
+			
+		}).then((response) => setScoreboards(response.data))
+			
 	};
 
 	const handleSignIn = (character) => {
@@ -91,20 +95,25 @@ function App() {
 		})
 	}
 	const handleUpdateHP = (character, HP) => {
+		let newAmount = currentCharacter.HP - HP
 		fetch(url + '/character/' + character.username + '/HP/' + HP, {
 			method: 'put',
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		})
+		.then((response) => handleSignIn(character))
 	}
 	const handleUpdateMadness = (character, madness) => {
-		fetch(url + '/character/' + character.username + '/madness/' + madness, {
+		let newAmount = character.MadnessLevel + madness
+		console.log('madness', madness, newAmount, character)
+		fetch(url + '/character/' + character.username + '/madness/' + newAmount, {
 			method: 'put',
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		})
+		.then((response) => handleSignIn(character))
 	}
 	
 	const handleUpdateCharacterScore = (character, score) => {
@@ -113,7 +122,7 @@ function App() {
 			headers: {
 				'Content-Type': 'application/json'
 			}
-		})
+		}).then(response => getScoreboard())
 	}
 
 	//useEffect
@@ -174,7 +183,7 @@ function App() {
 					path='/score/'
 					render={(rp) => (
 						<>
-							<Scoreboard />
+							<Scoreboard {...rp} scoreboard={scoreboards} />
 						</>
 					)}
 				/>
@@ -191,6 +200,7 @@ function App() {
 					path='/lose'
 					render={(rp) => <Death {...rp}  death={death}/>}
 				/>
+				<Route exact path='/about' component={About} />
 			</Switch>
 		</div>
 	);

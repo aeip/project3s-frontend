@@ -40,6 +40,22 @@ export const Start = (prop) => {
 	const handleChange = (event) => {
 		setFormData({ ...formData, [event.target.name]: event.target.value });
 	};
+
+	const toScore = () => {
+		props.history.push('/score')
+	}
+
+	const toAbout = () => {
+		props.history.push('/about')
+	}
+
+	window.onload = function() {
+		if(!window.location.hash) {
+			window.location = window.location + '#loaded';
+			window.location.reload();
+		}
+	}
+
 	return (
 		<div className='start'>
 			<h1>Dunwich Manor</h1>
@@ -65,6 +81,8 @@ export const Start = (prop) => {
 				<br />
 				<input type='submit' value='Start' />
 			</form>
+			<button onClick={() => toScore()}>Highscores</button>
+			<button onClick={() => toAbout()}>About</button>
 		</div>
 	);
 };

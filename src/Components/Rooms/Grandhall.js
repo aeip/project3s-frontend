@@ -21,6 +21,7 @@ export const Grandhall = (prop) => {
 			props.history.push('/game/dininghall/');
 		} else {
 			alert("The door is locked")
+			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
 	};
 	const nextArtGallery = () => {
@@ -34,16 +35,22 @@ export const Grandhall = (prop) => {
 			props.history.push('/game/recroom/');
 		} else {
 			alert("The door is locked")
+			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
 	};
 	const nextMasterBedroom = () => {
 		props.history.push('/game/masterbedroom/');
 	};
+	const nextArtGallery = () => {
+		props.history.push('/game/artgallery');
+	};
 	const nextGuestBedroom = () => {
 		if(props.currentCharacter.inventory.includes('Guest Bedroom Key')){
 			props.history.push('/game/guestbedroom/');
+			
 		} else {
 			alert("The door is locked")
+			props.handleUpdateMadness(props.currentCharacter, 1)
 		}
 		
 	};
@@ -96,6 +103,7 @@ export const Grandhall = (prop) => {
 						<Dropdown.Item ><button onClick={() => nextRecRoom()}>Rec Room</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextArtGallery()}>Art Gallery</button></Dropdown.Item>
 						<Dropdown.Item ><button onClick={() => nextDiningHall()}>Dining Hall</button></Dropdown.Item>
+						<Dropdown.Item ><button onClick={() => nextArtGallery()}>Art Gallery</button></Dropdown.Item>
 					</DropdownButton>
 					<button onClick={() => nextFoyer()}>Back to Foyer</button>
 					</div>

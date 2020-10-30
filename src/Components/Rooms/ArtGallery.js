@@ -8,13 +8,25 @@ export const ArtGallery = (prop) => {
 	let props = prop.props;
     props.handleUpdateCharacterRoom(props.currentCharacter, 'Art Gallery');
 
+	const [inspected, setInspected] = useState(false)
+	
+
+	const inspectPainting = () => {
+		props.handleUpdateMadness(props.currentCharacter, 6)
+		setInspected(true)
+		setTimeout(changeImageBack, 1000)
+	}
+	const changeImageBack = () => {
+		setInspected(false)
+	}
+
 	const nextGrandHall = () => {
         props.history.push('/game/grandhall/')
     }
 
     return(
         <div className='artgallery room'>
-			<h1>Study</h1>
+			<h1>Art Gallery</h1>
 
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}
@@ -23,7 +35,7 @@ export const ArtGallery = (prop) => {
 					<Inventory props={props} />
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						<img src='https://i.imgur.com/pNOztsH.png' />
+						{inspected ? <img src='https://images.unsplash.com/photo-1553465528-5a213ccc0c7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80' /> : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -45,7 +57,7 @@ export const ArtGallery = (prop) => {
 				<div className='text-box'>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
-
+						<button onClick={inspectPainting}>Inspect Paintings</button>
 					</div>
 					<br />
 					<div className='nav-buttons'>
