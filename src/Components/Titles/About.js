@@ -2,7 +2,9 @@ import React from 'react';
 import '../Styles/Titles/About.scss'
 
 export const About = (props) => {
-
+    const handleClick = () => {
+        props.history.push('/');
+    }
 	return (
         <div className='death'>
             <h1>About Dunwich Manor</h1>
@@ -23,6 +25,7 @@ export const About = (props) => {
             <h5>Zane Griffin</h5>
             <img src='https://media-exp1.licdn.com/dms/image/C4E03AQFmYaZs6x0PLw/profile-displayphoto-shrink_200_200/0?e=1609372800&v=beta&t=NysmMPJgymAiI6cqlsf7wFkTlYS0bctarbnN9uKuXZs' />
             <p>about you and contributions</p>
+            <button onClick={() => handleClick()}>Back</button>
         </div>
     )
 };

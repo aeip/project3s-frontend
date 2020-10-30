@@ -45,8 +45,8 @@
         }
     }
     .text-box {
-        // border-style: ridge;
-        border-width: 5px;
+        border-top-style: ridge;
+        border-top-width: 5px;
         border-color: goldenrod;
         background-color: rgb(17, 17, 17);
         color: white;
@@ -65,12 +65,17 @@
             border-style: ridge;
             border-color:goldenrod;
             border-radius: 5px;
+            margin: auto;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             align-content: center;
             height: fit-content;
+            width: 200px;
             padding: 10px;
+            button {
+
+            }
         }
     }
 }

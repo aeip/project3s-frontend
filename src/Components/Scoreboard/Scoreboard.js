@@ -2,8 +2,10 @@ import React from 'react';
 import '../Styles/Titles/Score.scss'
 
 export const Scoreboard = (props) => {
-
-console.log('scoreboard',props.scoreboard)
+	const handleClick = () => {
+        props.history.push('/');
+    }
+	console.log('scoreboard',props.scoreboard)
 
 	return <div className='scoreboard'>
 		<h1>Highscores</h1>
@@ -15,6 +17,6 @@ console.log('scoreboard',props.scoreboard)
 				</>
 			)
 		}) : ''}
-
+		<button onClick={() => handleClick()}>Back</button>
 	</div>;
 };
