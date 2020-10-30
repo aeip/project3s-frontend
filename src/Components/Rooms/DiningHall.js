@@ -64,10 +64,9 @@ const DiningHall = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-                    <p>room intro text</p>
+                    <p>You enter the Dining Hall where a large table sits empty and unattended. Looks like no ones had a meal here for some time.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
-                        
                         {hasKey ? (
 							    null
 							) : [
@@ -76,7 +75,7 @@ const DiningHall = (prop) => {
                             ]
                         }
 					</div>
-                    <p>transition text here</p>
+                    <p>There is a side door leading to the Kitchen with the door back to The Great Hall standing behind you.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}

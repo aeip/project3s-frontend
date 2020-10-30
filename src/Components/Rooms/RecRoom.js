@@ -79,7 +79,7 @@ export const RecRoom = (prop) => {
                             ]
                         }
 					</div>
-                    <p>Aside from the door leading back to The Grand Hall, there is another that leads to the Ballroom</p>
+                    <p>Aside from the door leading back to The Grand Hall, there is another that leads to the Ballroom.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}

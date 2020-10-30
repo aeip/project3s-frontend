@@ -63,18 +63,18 @@ export const Greenhouse = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-                    <p>intro room text</p>
+                    <p>It's hard to say what's grown more in this forgotten Greenhouse...the plants in it or the plants around it.</p>
 					<div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {hasKey ? (
 							    null
 							) : [
-                                <p>Would you like to pick up a key?</p>,
+                                <p>You see a glint of metal flash from the shadows. It's another key!</p>,
                                 <button onClick={() => pickUpKey()}>Pick Up Key</button>
                             ]
                         }
 					</div>
-                    <p>transitional room text</p>
+                    <p>The glass doors lead to the Ballroom floor.</p>
                     <div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
                         {/* <button onClick={() => nextRoom()}>Next Room</button> */}

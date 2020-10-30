@@ -51,7 +51,7 @@ export const BallRoom = (prop) => {
                     <div className='header'>
                         {/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
     					<Inventory props={props} />
-                        <h1>Ball Room</h1>
+                        <h1>Ballroom</h1>
                     </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
@@ -89,7 +89,7 @@ export const BallRoom = (prop) => {
                             ]
                         }
 					</div>
-                    <p>A set of glass double doors leads to the Greenhouse and another leading to the Rec Room. There's a final door leading back to The Grand Hall</p>
+                    <p>A set of glass double doors lead to the Greenhouse and another door leading to the Rec Room. There's a final door leading back to The Grand Hall.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}

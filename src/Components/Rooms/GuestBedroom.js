@@ -43,7 +43,7 @@ export const GuestBedroom = (prop) => {
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
 						{hasKey ? 
-                            [<img src='https://i.imgur.com/NVvZndA.png' />,<p>You picked up a key!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />} 
+                            [<img src='https://i.imgur.com/NVvZndA.png' />,<p>What luck! You found a door key above the door frame. Very convenient.</p>] : <img src='https://i.imgur.com/pNOztsH.png' />} 
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -69,12 +69,12 @@ export const GuestBedroom = (prop) => {
                         {hasKey ? (
 							    null
 							) : [
-                                <p>Would you like to pick up a key?</p>,
-                                <button onClick={() => pickUpKey()}>Pick Up Key</button>
+                                <p>There's got to be something useful here...</p>,
+                                <button onClick={() => pickUpKey()}>Search the room</button>
                             ]
                         }
 					</div>
-                    <p>The guest room door leads out to the Great Hall.</p>
+                    <p>The Guest Bedroom door leads out to The Grand Hall.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}

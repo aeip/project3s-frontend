@@ -40,7 +40,7 @@ export const Kitchen = (prop) => {
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
 						{hasKnife ? 
-                            [<img src='https://i.imgur.com/rkOnm2E.png' />,<p>You picked up the knife.</p>,<p>A rat jumped out and has bitten you!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />}
+                            [<img src='https://i.imgur.com/rkOnm2E.png' />,<p>You acquired a knife.</p>,<p>A rat jumped out and has bitten you!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -60,18 +60,19 @@ export const Kitchen = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-					<p>intro room text</p>
+					<p>The Kitchens are unattended. There's not even a glow of coals from the stove.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {hasKnife ? (
 								null
 							) : [
+								<p>A set of old Kitchen knives are sitting in a corner table.</p>,
 								<p>Would you like to pick up a knife?</p>,
 								<button onClick={() => pickUpKnife()}>Pick up knife</button>
 							]	
 						}
                     </div>
-					<p>transition room text</p>
+					<p>The door leads back to the Dining Hall.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
