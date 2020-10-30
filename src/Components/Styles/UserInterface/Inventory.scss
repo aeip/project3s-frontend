@@ -9,14 +9,12 @@
             background-color: goldenrod;
         }
         .dropdown-menu {
-            button {
-                background-color: green;
-                position: fixed;
-                top: 0;
-                left: 0;
-            }
             a {
                 background-color: gray;
+                color: black;
+                font-weight: bold;
+                font-size: 13px;
+                text-decoration: none;
                 display: flex;
                 padding: 5px;
             }
@@ -34,6 +32,11 @@
                 width: fit-content; 
                 height: fit-content;
                 border-bottom-right-radius: 20px;
+            }
+            .dropdown-menu {
+                a {
+                    font-size: 20px;
+                }
             }
         }
     }
