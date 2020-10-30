@@ -19,7 +19,7 @@ export const Kitchen = (prop) => {
             return
         }else if (!hasKnife) {
             props.handleUpdateCharacter(props.currentCharacter, 'Knife');
-            props.handleUpdateHP(props.currentCharacter, 0)
+            props.handleUpdateHP(props.currentCharacter, 35)
 			setHasKnife(true);
 		}
 	};
