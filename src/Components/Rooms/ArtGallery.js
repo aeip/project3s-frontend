@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Inventory} from '../Inventory/Inventory';
-import '../Styles/Rooms/Study.scss'
+import '../Styles/Rooms/ArtGallery.scss'
 import '../Styles/UserInterface/GameScreen.scss';
 import '../Styles/UserInterface/CharacterPanel.scss'
 
@@ -26,13 +26,17 @@ export const ArtGallery = (prop) => {
 
     return(
         <div className='artgallery room'>
-			<h1>Art Gallery</h1>
+			
 
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}
 				<div className='background'>
-                    {/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
-					<Inventory props={props} />
+                   
+                    <div className='header'>
+                        {/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
+    					<Inventory props={props} />
+                        <h1>Art Gallery</h1>
+                    </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
 						{inspected ? <img src='https://images.unsplash.com/photo-1553465528-5a213ccc0c7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80' /> : <img src='https://i.imgur.com/pNOztsH.png' />}

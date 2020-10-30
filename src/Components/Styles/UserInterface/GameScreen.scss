@@ -17,7 +17,22 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+        h1 {
+            border-style: ridge;
+            border-width: 3px;
+            border-color: goldenrod;
+            min-width: 100px;
+            padding: 10px;
+            margin: 5px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            border-radius: 10px;
+        }
         .graphic {
             display: flex;
             margin: auto;
