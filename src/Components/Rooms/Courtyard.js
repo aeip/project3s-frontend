@@ -39,7 +39,7 @@ export const Courtyard = (prop) => {
 					<Inventory props={props} />
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						{isDead ? <img src='https://images.unsplash.com/photo-1553465528-5a213ccc0c7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80'></img> : <img src='https://i.imgur.com/pNOztsH.png' />}
+						{isDead ? <img src='https://images.unsplash.com/photo-1572453020814-972b244074d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'></img> : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>

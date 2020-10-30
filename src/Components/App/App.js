@@ -31,6 +31,7 @@ function App() {
 		} else if (num === 3){ //bad ending
 			setDeath("Something did not want you there. You need to defend yourself...")
 		}
+		handleUpdateMadness(currentCharacter, -currentCharacter.MadnessLevel)
 	}
 
 	//empty character
