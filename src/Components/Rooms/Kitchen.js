@@ -18,7 +18,7 @@ export const Kitchen = (prop) => {
             return
         }else if (!hasKnife) {
             props.handleUpdateCharacter(props.currentCharacter, 'Knife');
-            props.handleUpdateHP(props.currentCharacter, 34)
+            props.handleUpdateHP(props.currentCharacter, 0)
 			setHasKnife(true);
 		}
 	};
@@ -34,11 +34,12 @@ export const Kitchen = (prop) => {
                     <div className='header'>
                         {/* Inventory sits here to appear in the 'game window' instead of outside of it. */}
     					<Inventory props={props} />
-                        <h1>Kitchen</h1>
+                        <h1>Dining Hall</h1>
                     </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						<img src='https://i.imgur.com/pNOztsH.png' />
+						{hasKnife ? 
+                            [<img src='https://i.imgur.com/rkOnm2E.png' />,<p>You picked up the knife.</p>,<p>A rat jumped out and has bitten you!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -61,15 +62,13 @@ export const Kitchen = (prop) => {
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {hasKnife ? (
-                            <>
-								<p>You picked up a knife</p>
-                                <p>A rat has bitten you</p>
-                            </>
-							) : (
-								<p>Would you like to pick up a knife?</p>
-							)}
-                    <button onClick={() => pickUpKnife()}>Pick up knife</button>
-					</div>
+								null
+							) : [
+								<p>Would you like to pick up a knife?</p>,
+								<button onClick={() => pickUpKnife()}>Pick up knife</button>
+							]	
+						}
+                    </div>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}

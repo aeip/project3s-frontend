@@ -55,7 +55,8 @@ export const BallRoom = (prop) => {
                     </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						<img src='https://i.imgur.com/pNOztsH.png' />
+						{hasKey ? 
+                            [<img src='https://i.imgur.com/NVvZndA.png' />,<p>You picked up a key!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />}
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -82,11 +83,12 @@ export const BallRoom = (prop) => {
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         <p>You see a lone key sitting at a side desk besides a lounge chair.</p>
                         {hasKey ? (
-								<p>You picked up a key</p>
-							) : (
-								<p>Would you like to pick up a key?</p>
-							)}
-                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
+							    null
+							) : [
+                                <p>Would you like to pick up the key?</p>,
+                                <button onClick={() => pickUpKey()}>Pick Up Key</button>
+                            ]
+                        }
 					</div>
                     <p>A set of glass double doors leads to the gardens and another leading to the Recreational Room. There's a final door leading back to the Grand Hall</p>
 					<div className='nav-buttons'>

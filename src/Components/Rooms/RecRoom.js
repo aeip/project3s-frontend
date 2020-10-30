@@ -44,7 +44,8 @@ export const RecRoom = (prop) => {
                     </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						<img src='https://i.imgur.com/pNOztsH.png' />
+						{hasKey ? 
+                            [<img src='https://i.imgur.com/NVvZndA.png' />,<p>You picked up a key!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />} 
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -67,11 +68,12 @@ export const RecRoom = (prop) => {
 					<div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {hasKey ? (
-								<p>You picked up a key</p>
-							) : (
-								<p>Would you like to pick up a key?</p>
-							)}
-                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
+							    null
+							) : [
+                                <p>Would you like to pick up a key?</p>,
+                                <button onClick={() => pickUpKey()}>Pick Up Key</button>
+                            ]
+                        }
 					</div>
                     
 					<div className='nav-buttons'>

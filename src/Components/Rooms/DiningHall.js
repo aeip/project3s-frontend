@@ -31,7 +31,6 @@ const DiningHall = (prop) => {
 
     return(
         <div className='dininghall room'>
-			
 
 			<div className='game-screen'>
 				{/* Game screen is 3 main categories, background, character pane, and text box. */}
@@ -44,7 +43,8 @@ const DiningHall = (prop) => {
                     </div>
 					<div className='graphic'>
 						{/* Inserting graphic for object/character of situation in question. can be used to show objects, enemies, etc. */}
-						<img src='https://i.imgur.com/pNOztsH.png' />
+						{hasKey ? 
+                            [<img src='https://i.imgur.com/NVvZndA.png' />,<p>You picked up a key!</p>] : <img src='https://i.imgur.com/pNOztsH.png' />} 
 					</div>
 				</div>
 				<div className='character-panel'>
@@ -66,7 +66,14 @@ const DiningHall = (prop) => {
 				<div className='text-box'>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
-                        <button onClick={() => pickUpKey()}>Pick Up Key</button>
+                        {hasKey ? (
+							    null
+							) : [
+                                <p>Would you like to pick up the key?</p>,
+                                <button onClick={() => pickUpKey()}>Pick Up Key</button>
+                            ]
+                        }
+                        
 					</div>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
