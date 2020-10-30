@@ -64,7 +64,7 @@ const DiningHall = (prop) => {
 				</div>
 				{/* This will be the location of everything text base and using buttons */}
 				<div className='text-box'>
-                    <p>You enter the Dining Hall where a large table sits empty and unattended. Looks like no ones had a meal here for some time.</p>
+                    <p>You enter the Dining Hall where a large table sits empty and unattended. Looks like no one's had a meal here for some time.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
                         {hasKey ? (
