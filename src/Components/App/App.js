@@ -15,7 +15,7 @@ import {About} from '../Titles/About'
 
 function App() {
 	//vars
-	const url = 'http://project3s-backend.herokuapp.com';
+	const url = 'https://project3s-backend.herokuapp.com';
 	const [title, setTitle] = useState('start');
 	const [scoreboards, setScoreboards] = useState([]);
 	const [death, setDeath] = useState('')

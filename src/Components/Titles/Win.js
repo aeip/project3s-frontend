@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 export const Win = (props) => {
-    const url = 'http://project3s-backend.herokuapp.com'
+    const url = 'https://project3s-backend.herokuapp.com'
     const handleClick = () => {
         props.history.push('/');
     }
