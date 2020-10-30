@@ -69,11 +69,11 @@ export const ArtGallery = (prop) => {
 							)}
 						<button onClick={inspectPainting}>Inspect the painting</button>
 					</div>
-                    <p>The door leads back to the Grand Hall.</p>
+                    <p>The door leads back to The Grand Hall.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}
-    					<button onClick={() => nextGrandHall()}>Enter the Grand Hall</button>
+    					<button onClick={() => nextGrandHall()}>Enter The Grand Hall</button>
 					</div>
 				</div>
 			</div>

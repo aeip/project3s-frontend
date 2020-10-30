@@ -75,7 +75,7 @@ export const Kitchen = (prop) => {
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
 					    {/* <button onClick={() => nextRoom()}>Next Room</button> */}
-                        <button onClick={() => nextDiningHall()}>Dining Hall</button>
+                        <button onClick={() => nextDiningHall()}>Back to Dining Hall</button>
 					</div>
 				</div>
 			</div>

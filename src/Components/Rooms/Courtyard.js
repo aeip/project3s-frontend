@@ -67,7 +67,7 @@ export const Courtyard = (prop) => {
                     <p>The far end of the courtyard has a forboding crypt entrance. It's locked and needs some special sort of key...</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
-                        <button onClick={() => nextGrandhall()}>Enter the Grand Hall</button>
+                        <button onClick={() => nextGrandhall()}>Enter The Grand Hall</button>
                         <button onClick={() => nextRoom()}>Open Crypt Door</button>
                     </div>
 				</div>
