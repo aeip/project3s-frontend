@@ -16,7 +16,7 @@ export const About = (props) => {
 
             <h5>Stasys Meclazcke</h5>
             <img src='https://media-exp1.licdn.com/dms/image/C5635AQExDzxXAPF_VA/profile-framedphoto-shrink_200_200/0?e=1604098800&v=beta&t=UeSyfe22oHU7hotIIm_RpffvNgKm9jXhLSh-oAcUyZk' />
-            <p>about you and contributions</p>
+            <p>Full stack developer with a passion in creating applications, cars, and games. Prior experience including multiple games on Windows store. Created the front end structure and read/wrote data to/from the backend</p>
 
             <h5>Woodrow Thompson</h5>
             <img src='https://media-exp1.licdn.com/dms/image/C4E03AQGJYRGcfxyTFg/profile-displayphoto-shrink_200_200/0?e=1609372800&v=beta&t=VmiuA1JIERsaTKCkJNewVWWmEfVmogiyDkGAzp0krsQ' />

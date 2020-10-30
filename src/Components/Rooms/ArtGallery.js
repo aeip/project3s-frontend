@@ -12,7 +12,7 @@ export const ArtGallery = (prop) => {
 	
 
 	const inspectPainting = () => {
-		props.handleUpdateMadness(props.currentCharacter, 0)
+		props.handleUpdateMadness(props.currentCharacter, 6)
 		setInspected(true)
 		setTimeout(changeImageBack, 3000)
 	}
