@@ -7,7 +7,7 @@ export const Start = (prop) => {
 	const [checkUser, setCheckUser] = useState(false);
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const url = 'http://project3s-backend.herokuapp.com';
+		const url = 'https://project3s-backend.herokuapp.com';
 		const checkUsername = () => {
 			fetch(url + '/character/' + formData.username)
 				.then((response) => response.json())
