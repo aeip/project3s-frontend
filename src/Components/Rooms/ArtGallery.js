@@ -12,9 +12,9 @@ export const ArtGallery = (prop) => {
 	
 
 	const inspectPainting = () => {
-		props.handleUpdateMadness(props.currentCharacter, 6)
+		props.handleUpdateMadness(props.currentCharacter, 2)
 		setInspected(true)
-		setTimeout(changeImageBack, 1000)
+		setTimeout(changeImageBack, 3500)
 	}
 	const changeImageBack = () => {
 		setInspected(false)
@@ -60,8 +60,14 @@ export const ArtGallery = (prop) => {
                     <p>Throughout the gallery is many bizzare statues and eerie paintings. The owner of this estate certainly had a macabre taste.</p>
                     <div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
+                        {inspected ? (
+								<p>OH DEAR GOD! What a gruesome image!</p>
+							) : (
+								<p>One painting in particular catches your eye...</p>
+							)}
 						<button onClick={inspectPainting}>Inspect Paintings</button>
 					</div>
+                    <p>The door leads back to the Grand Hall.</p>
 					<div className='nav-buttons'>
                         {/* buttons for navigating the mansion go here */}
     					{/* <button onClick={() => nextRoom()}>Next Room</button> */}

@@ -64,6 +64,11 @@ export const Greenhouse = (prop) => {
 				<div className='text-box'>
 					<div className='situations'>
 						{/* this is where we'll be putting the situations for things like effects and item pickup */}
+                        {hasKey ? (
+								<p>You picked up a key</p>
+							) : (
+								<p>Would you like to pick up a key?</p>
+							)}
                         <button onClick={() => pickUpKey()}>Pick Up Key</button>
 					</div>
                     <div className='nav-buttons'>
